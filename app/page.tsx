@@ -491,7 +491,7 @@ export default function Home() {
                   <img
                     src={accelerator.image}
                     alt={accelerator.title}
-                    className="h-auto w-full rounded-2xl"
+                    className="h-[240px] w-full rounded-2xl object-contain"
                   />
 
                   <div className="mt-5">
