@@ -8,8 +8,13 @@ import "./globals.css";
 const helveticaNeue = localFont({
   src: [
     {
-      path: "../public/fonts/HelveticaNeue-Medium.woff2",
-      weight: "500",
+      path: "../public/fonts/HelveticaNeue-Light.woff",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/HelveticaNeueRegular.woff",
+      weight: "400",
       style: "normal",
     },
     {
@@ -17,43 +22,26 @@ const helveticaNeue = localFont({
       weight: "500",
       style: "normal",
     },
-    {
-      path: "../public/fonts/HelveticaNeue-Medium.ttf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/HelveticaNeue-Light.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/HelveticaNeue-Light.woff",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/HelveticaNeue-Light.ttf",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/HelveticaNeue-Light.woff2",
-      weight: "100",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/HelveticaNeue-Light.woff",
-      weight: "100",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/HelveticaNeue-Light.ttf",
-      weight: "100",
-      style: "normal",
-    },
   ],
   variable: "--font-helvetica-neue",
+  display: "swap",
+});
+
+const helveticaNeueLight = localFont({
+  src: "../public/fonts/HelveticaNeue-Light.woff",
+  variable: "--font-helvetica-neue-light",
+  display: "swap",
+});
+
+const helveticaNeueRegular = localFont({
+  src: "../public/fonts/HelveticaNeueRegular.woff",
+  variable: "--font-helvetica-neue-regular",
+  display: "swap",
+});
+
+const helveticaNeueMedium = localFont({
+  src: "../public/fonts/HelveticaNeue-Medium.woff",
+  variable: "--font-helvetica-neue-medium",
   display: "swap",
 });
 
@@ -70,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${helveticaNeue.className} ${helveticaNeue.variable} antialiased`}
+        className={`${helveticaNeue.className} ${helveticaNeue.variable} ${helveticaNeueLight.variable} ${helveticaNeueRegular.variable} ${helveticaNeueMedium.variable} antialiased`}
       >
         <SmoothScroll />
         <Header />

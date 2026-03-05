@@ -103,7 +103,7 @@ const aiAccelerators = [
   {
     title: "Ellow Talent Marketplaces",
     subtitle: "Technology",
-    image: "/images/1.jpg",
+    image: "/images/1.png",
   },
   {
     title: "Innowrap Technologies",
@@ -118,12 +118,12 @@ const aiAccelerators = [
   {
     title: "Benchkart Services Pvt. Ltd.",
     subtitle: "Technology",
-    image: "/images/4.jpg",
+    image: "/images/4.png",
   },
   {
     title: "Capital Numbers",
     subtitle: "Technology",
-    image: "/images/5.jpeg",
+    image: "/images/5.jpg",
   },
 ];
 
@@ -343,13 +343,13 @@ export default function Home() {
             <div className=" sm:p-8 pb-0">
               <div className="flex items-center justify-between gap-8 flex-col lg:flex-row">
                 <div className="text-white w-full lg:w-1/2">
-                  <h1 className="text-4xl font-normal leading-tight sm:text-5xl text-orange-500 font-helvetica-neue">
+                  <h1 className="text-4xl leading-tight sm:text-5xl text-orange-500 font-hn-medium">
                     {slides[activeSlide].title}
                   </h1>
-                  <p className="mt-4 max-w-xl text-xl leading-snug text-white/90 sm:text-2xl">
+                  <p className="mt-4 max-w-xl text-xl leading-snug text-white/90 sm:text-2xl font-hn-light">
                     {slides[activeSlide].description}
                   </p>
-                  <button className="mt-8 rounded-full mt-8 rounded-full bg-orange-500 px-7 py-3 text-sm font-normal text-black transition hover:bg-orange-400 hover:cursor-pointermt-8 rounded-full bg-orange-500 px-7 py-3 text-sm font-normal text-black transition">
+                  <button className="mt-8 rounded-full bg-orange-500 px-7 py-3 text-sm text-black transition hover:cursor-pointer hover:bg-orange-400 font-hn-medium">
                     {slides[activeSlide].cta}
                   </button>
                 </div>
@@ -428,12 +428,14 @@ export default function Home() {
           <div className="pointer-events-none absolute inset-y-0 left-0 w-[280px]" />
 
           <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
-            <h2 className="text-center text-4xl  text-white sm:text-6xl">
+            <h2 className="text-center text-4xl  text-white sm:text-6xl font-hn-medium">
               Industry-Leading{" "}
-              <span className="text-orange-500">Technologies</span>
+              <span className="text-orange-500 font-hn-medium">
+                Technologies
+              </span>
             </h2>
 
-            <p className="text-center text-xl my-5 text-white/50 max-w-3xl mx-auto">
+            <p className="text-center text-xl my-5 text-white/50 max-w-3xl mx-auto font-hn-light">
               Our expertise spans across modern frameworks and platforms to
               deliver cutting-edge solutions that drive innovation and business
               growth.
@@ -471,13 +473,13 @@ export default function Home() {
                   Trusted by Industry
                   <span className="text-orange-500"> Leaders</span>
                 </h2>
-                <p className="text-left text-xl my-5 text-white/50 max-w-3xl mx-auto">
+                <p className="text-left text-xl my-5 text-white/50 max-w-3xl mx-auto font-hn-light">
                   We're proud to work with innovative companies across various
                   industries, helping them achieve their digital transformation
                   goals and business success.
                 </p>
               </div>
-              <button className="rounded-full border border-white px-8 py-3 text-sm font-normal text-white transition hover:bg-white hover:text-black">
+              <button className="rounded-full border border-white px-8 py-3 text-sm font-hn-light text-white transition hover:bg-white hover:text-black">
                 EXPLORE MORE ACCELERATORS
               </button>
             </div>
@@ -495,10 +497,10 @@ export default function Home() {
                   />
 
                   <div className="mt-5">
-                    <h3 className="text-2xl font-regular text-orange-500 capitalize">
+                    <h3 className="text-2xl font-hn-medium text-orange-500 capitalize ">
                       {accelerator.title}
                     </h3>
-                    <p className="mt-1 text-xl font-normal text-white flex items-center">
+                    <p className="mt-1 text-xl font-hn-light text-white flex items-center">
                       – {accelerator.subtitle}
                     </p>
                   </div>
@@ -527,7 +529,7 @@ export default function Home() {
                         : "border-white/15 bg-black/60"
                     }`}
                   >
-                    <h3 className="text-lg font-normal text-white sm:text-xl">
+                    <h3 className="text-lg font-hn-light text-white sm:text-xl">
                       {card.title}
                     </h3>
                     {/* <p className="mt-3 max-w-full text-xl leading-relaxed text-white/85 sm:text-lg sm:leading-[1.35]">
@@ -601,7 +603,7 @@ export default function Home() {
                   <h3 className="text-2xl font-medium text-white">
                     Services to drive digital growth
                   </h3>
-                  <p className="hidden md:block mt-4 text-base leading-relaxed text-white/70">
+                  <p className="hidden md:block mt-4 text-base leading-relaxed text-white/70 font-hn-light">
                     Our digital enablement services redefine what's possible and
                     deliver outcomes with greater consistency, scale, and speed.
                   </p>
@@ -609,7 +611,9 @@ export default function Home() {
                     href="/services"
                     className="mt-10 flex justify-between items-center gap-3 text-sm font-normal uppercase text-white "
                   >
-                    <span className="underline">Explore Services</span>
+                    <span className="underline font-hn-medium">
+                      Explore Services
+                    </span>
                     <span className="text-3xl leading-none">→</span>
                   </Link>
                 </article>
@@ -622,7 +626,7 @@ export default function Home() {
                   <h3 className="text-2xl font-medium text-white">
                     Practitioner-led capabilities
                   </h3>
-                  <p className="hidden md:block mt-4 text-base leading-relaxed text-white/70">
+                  <p className="hidden md:block mt-4 text-base leading-relaxed text-white/70 font-hn-light">
                     Comprehensive digital capabilities to bolster enterprise
                     modernization and digital maturity.
                   </p>
@@ -631,7 +635,9 @@ export default function Home() {
                       href="/services/it-consulting"
                       className="w-full mt-10 flex items-center justify-between gap-3 text-sm font-normal uppercase text-white "
                     >
-                      <span className="underline">Explore Capabilities</span>
+                      <span className="underline font-hn-medium">
+                        Explore Capabilities
+                      </span>
                       <span className="text-3xl leading-none">→</span>
                     </Link>
                   </div>
@@ -645,7 +651,7 @@ export default function Home() {
                   <h3 className="text-2xl font-medium text-white">
                     Industry focused expertise
                   </h3>
-                  <p className="hidden md:block mt-4 text-base leading-relaxed text-white/70">
+                  <p className="hidden md:block mt-4 text-base leading-relaxed text-white/70 font-hn-light">
                     Our practitioners deliver tailored, industry-specific
                     digital solutions, products, and platforms, with deep
                     technical and domain expertise.
@@ -654,7 +660,9 @@ export default function Home() {
                     href="/industies"
                     className="mt-10 flex justify-between items-center gap-3 text-sm font-normal uppercase text-white"
                   >
-                    <span className="underline">Explore Industries</span>
+                    <span className="underline font-hn-medium">
+                      Explore Industries
+                    </span>
                     <span className="text-3xl leading-none">→</span>
                   </Link>
                 </article>
@@ -682,10 +690,10 @@ export default function Home() {
               >
                 {byTheNumbers.map((item, index) => (
                   <div key={item.label}>
-                    <p className="font-georgia text-6xl leading-none text-white sm:text-7xl">
+                    <p className="font-georgia text-6xl leading-none text-white sm:text-7xl font-hn-medium">
                       {animatedNumbers[index]}
                     </p>
-                    <p className="mt-3 text-2xl font-normal text-white/90 sm:text-3xl">
+                    <p className="mt-3 text-2xl font-hn-light text-white/90 sm:text-3xl">
                       {item.label}
                     </p>
                   </div>
@@ -714,7 +722,7 @@ export default function Home() {
               <span className="text-orange-500"> Your Business?</span>
             </h2>
 
-            <p className="mt-5 max-w-3xl text-xl leading-relaxed text-white/90 sm:text-2xl sm:leading-[1.35]">
+            <p className="font-hn-light mt-5 max-w-3xl text-xl leading-relaxed text-white/90 sm:text-2xl sm:leading-[1.35]">
               Let's discuss how our IT solutions can help you achieve your
               business goals and drive digital transformation. Contact us today
               for a free consultation.
@@ -722,7 +730,7 @@ export default function Home() {
 
             <Link
               href="/contact-us"
-              className="mt-10 inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-normal uppercase tracking-wide text-black transition hover:bg-white/90"
+              className="mt-10 inline-flex font-medium items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-normal uppercase tracking-wide text-black transition hover:bg-white/90"
             >
               Contact Our AI Experts
             </Link>

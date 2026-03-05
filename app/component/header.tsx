@@ -168,12 +168,12 @@ function Header() {
         </button>
 
         <nav aria-label="Main navigation" className="header-desktop-nav">
-          <ul className="flex flex-wrap items-center justify-end gap-6 text-sm font-semibold uppercase tracking-wide text-zinc-100">
+          <ul className="flex flex-wrap items-center justify-end gap-6 text-sm font-hn-medium uppercase tracking-wide text-zinc-100">
             {navItems.slice(0, 2).map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="transition-colors hover:text-white/80 font-normal"
+                  className="transition-colors hover:text-white/80 "
                 >
                   {item.label}
                 </Link>
@@ -182,7 +182,7 @@ function Header() {
             <li className="group static">
               <Link
                 href="/services"
-                className="inline-flex items-center gap-1 rounded-md  px-3 py-2 transition-colors hover:bg-zinc-700 font-normal"
+                className="inline-flex items-center gap-1 rounded-md  px-3 py-2 transition-colors hover:bg-zinc-700 font-hn-medium"
               >
                 Services
                 <svg
@@ -207,7 +207,7 @@ function Header() {
                     <li key={item.href}>
                       <Link
                         href={item.href}
-                        className="block h-full rounded-3xl border border-zinc-800 bg-zinc-950 px-6 py-5 transition-colors hover:border-zinc-600 font-normal"
+                        className="block h-full rounded-3xl border border-zinc-800 bg-zinc-950 px-6 py-5 transition-colors hover:border-zinc-600 font-hn-medium"
                       >
                         <div className="mb-3 flex items-start justify-between gap-4">
                           <h3 className="text-[22px] font-semibold normal-case tracking-normal text-zinc-100">
@@ -228,7 +228,7 @@ function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="transition-colors hover:text-white/80 font-normal"
+                  className="transition-colors hover:text-white/80 font-hn-medium"
                 >
                   {item.label}
                 </Link>
@@ -262,7 +262,7 @@ function Header() {
                     strokeLinecap="round"
                   />
                 </svg>
-                <span>Search</span>
+                <span className="font-hn-light">Search</span>
               </button>
               {searchOpen && (
                 <form
@@ -281,7 +281,7 @@ function Header() {
             <li>
               <Link
                 href="/contact-us"
-                className="inline-flex rounded-full bg-white px-5 py-2 text-sm font-normal uppercase tracking-wide text-black transition-colors hover:bg-zinc-200"
+                className="inline-flex rounded-full bg-white px-5 py-2 text-sm font-hn-medium uppercase tracking-wide text-black transition-colors hover:bg-zinc-200"
               >
                 Contact Us
               </Link>
@@ -302,7 +302,7 @@ function Header() {
               <li key={`mobile-${item.href}`} data-mobile-item>
                 <Link
                   href={item.href}
-                  className="block rounded-xl px-3 py-2 font-normal transition-colors hover:bg-zinc-800"
+                  className="block rounded-xl px-3 py-2 font-hn-medium transition-colors hover:bg-zinc-800"
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.label}
@@ -317,7 +317,9 @@ function Header() {
                 aria-controls="mobile-services-submenu"
                 className="flex w-full items-center justify-between rounded-xl py-2 text-left text-xs text-zinc-400 transition-colors hover:bg-zinc-800"
               >
-                <span className="uppercase text-sm text-white">Services</span>
+                <span className="uppercase text-sm text-white font-hn-medium">
+                  Services
+                </span>
                 <svg
                   className={`h-4 w-4 transition-transform duration-200 ${
                     mobileServicesOpen ? "rotate-180" : "rotate-0"
@@ -344,7 +346,7 @@ function Header() {
                     <li key={`mobile-service-${item.href}`} data-mobile-item>
                       <Link
                         href={item.href}
-                        className="block rounded-xl px-3 py-2 uppercase text-sm text-white transition-colors hover:bg-zinc-800"
+                        className="font-hn-medium block rounded-xl px-3 py-2 uppercase text-sm text-white transition-colors hover:bg-zinc-800"
                         onClick={() => setMenuOpen(false)}
                       >
                         {item.label}
@@ -357,7 +359,7 @@ function Header() {
             <li data-mobile-item>
               <Link
                 href="/contact-us"
-                className="mt-3 inline-flex rounded-full bg-white px-5 py-2 text-sm font-normal uppercase tracking-wide text-black transition-colors hover:bg-zinc-200"
+                className="mt-3 inline-flex rounded-full bg-white px-5 py-2 text-sm font-hn-medium uppercase tracking-wide text-black transition-colors hover:bg-zinc-200"
                 onClick={() => setMenuOpen(false)}
               >
                 Contact Us

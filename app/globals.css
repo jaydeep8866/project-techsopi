@@ -32,11 +32,56 @@ select {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-helvetica-neue), Arial, Helvetica, sans-serif;
+  font-synthesis: none;
   background: #000;
 }
 
 .font-helvetica-neue {
   font-family: var(--font-helvetica-neue), Arial, Helvetica, sans-serif;
+}
+
+.font-hn-light {
+  font-family: var(--font-helvetica-neue-light), Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+.font-hn-regular {
+  font-family: var(--font-helvetica-neue-regular), Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.font-hn-medium {
+  font-family: var(--font-helvetica-neue-medium), Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+/* Ensure common Tailwind weight utilities pick the intended local font file. */
+.font-light {
+  font-family: var(--font-helvetica-neue-light), Arial, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+.font-normal {
+  font-family: var(--font-helvetica-neue-regular), Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.font-medium,
+.font-semibold,
+.font-bold {
+  font-family: var(--font-helvetica-neue-medium), Arial, Helvetica, sans-serif;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .font-georgia {

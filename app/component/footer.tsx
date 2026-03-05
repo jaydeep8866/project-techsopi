@@ -154,7 +154,7 @@ export default function Footer() {
                   <li key={item.label}>
                     <Link
                       href={item.href}
-                      className="text-[14px] leading-tight text-white/90 transition-colors hover:text-white"
+                      className="text-[14px] leading-tight text-white/90 transition-colors hover:text-white font-hn-light"
                     >
                       {item.label}
                     </Link>
@@ -186,7 +186,7 @@ export default function Footer() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="transition-colors hover:text-white"
+                  className="transition-colors hover:text-white font-hn-light"
                 >
                   {item.label}
                 </Link>
