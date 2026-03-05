@@ -325,7 +325,7 @@ export default function Home() {
 
   return (
     <main ref={pageRef}>
-      <section className="hero relative h-full lg:h-[80vh] w-full overflow-hidden mt-0 lg:-mt-[90px]">
+      <section className="hero relative h-full  w-full overflow-hidden ">
         <video
           className="absolute inset-0 h-full w-full object-cover"
           autoPlay
