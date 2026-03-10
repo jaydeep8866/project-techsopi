@@ -127,8 +127,8 @@ function Header() {
   }, [menuOpen]);
 
   return (
-    <header className="relative z-50 font-helvetica-neue w-full bg-transparent text-white pt-4">
-      <div className="relative mx-auto flex w-full max-w-350 items-center justify-between px-3.5 py-2 rounded-4xl border-1 border-zinc-800 bg-black/40 backdrop-blur-sm">
+    <header className="fixed z-50 font-helvetica-neue w-full bg-transparent text-white pt-4">
+      <div className="relative mx-auto flex w-full max-w-350 items-center justify-between px-3.5 py-2 rounded-4xl border-1 border-zinc-800 bg-black/40 backdrop-blur-[2px]">
         <div className="navbar7_logo flex items-center">
           <Link href="/" aria-label="home" className="inline-flex items-center">
             <Image

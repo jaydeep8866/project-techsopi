@@ -175,12 +175,12 @@ export default function Footer() {
               <Image
                 src={logo}
                 alt="Altimetrik Logo"
-                className="h-auto w-90"
+                className="h-auto w-40"
                 priority={false}
               />
             </Link>
 
-            <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-white/90">
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-white/90 font-hn-light">
               <span>© 2026 Techsopi</span>
               {legalLinks.map((item) => (
                 <Link

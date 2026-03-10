@@ -325,9 +325,9 @@ export default function Home() {
 
   return (
     <main ref={pageRef}>
-      <section className="hero relative h-full  w-full overflow-hidden ">
+      <section className="hero relative h-full  w-full overflow-hidden pt-24">
         <video
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-[945px] w-full object-cover"
           autoPlay
           loop
           muted
@@ -384,9 +384,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="combine bg-black bg-[url('/images/service-bg.png')] bg-left bg-no-repeat bg-contain">
-        <section className="our-services  py-16 sm:py-0">
-          <div className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8 ">
+      <div className="combine bg-black bg-[url('/images/service-bg.png')] bg-left bg-no-repeat bg-contain ">
+        <section className="our-services  py-16 sm:py-0 pt-24">
+          <div className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8 py-24 ">
             <div className="flex gap-3 snap-x snap-mandatory overflow-x-auto pb-2 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden lg:grid lg:overflow-visible lg:snap-none lg:grid-cols-2 xl:grid-cols-4">
               {serviceCards.map((card) => (
                 <article
@@ -488,7 +488,7 @@ export default function Home() {
               {aiAccelerators.map((accelerator) => (
                 <article
                   key={accelerator.title}
-                  className="w-full min-w-full snap-start rounded-3xl border border-white/15 bg-[rgba(18,17,17,0.5)] p-4 lg:w-auto lg:min-w-0"
+                  className="w-full min-w-full snap-start rounded-3xl border border-white/15 bg-[rgba(18,17,17,0.5)] p-4 lg:w-auto lg:min-w-0 hover:bg-[#46A4DB]/27 transition-colors"
                 >
                   <img
                     src={accelerator.image}
@@ -596,7 +596,7 @@ export default function Home() {
 
               <div className="grid gap-6 lg:grid-cols-2 lg:gap-8 -mt-40 md:mt-0">
                 <article
-                  className="success-1 ml-0 xl:ml-40 rounded-3xl border border-white/15 bg-[rgba(18,17,17,0.62)] hover:bg-[rgba(255,102,56,0.20)] p-6 backdrop-blur-[1px] mb-0 xl:mb-36 lg:max-w-[470px]"
+                  className="success-1 ml-0 xl:ml-40 rounded-3xl border border-white/15 bg-[rgba(18,17,17,0.62)] hover:bg-[#46A4DB]/27 p-6 backdrop-blur-[1px] mb-0 xl:mb-36 lg:max-w-[470px]"
                   onMouseEnter={() => setIsSuccessOneHovered(true)}
                   onMouseLeave={() => setIsSuccessOneHovered(false)}
                 >
@@ -619,7 +619,7 @@ export default function Home() {
                 </article>
 
                 <article
-                  className="success-2 rounded-3xl border border-white/15 bg-[rgba(18,17,17,0.62)] hover:bg-[rgba(255,102,56,0.20)] p-6 backdrop-blur-[1px] lg:mt-[160px] lg:ml-auto lg:max-w-[470px]"
+                  className="success-2 rounded-3xl border border-white/15 bg-[rgba(18,17,17,0.62)] hover:bg-[#46A4DB]/27 p-6 backdrop-blur-[1px] lg:mt-[160px] lg:ml-auto lg:max-w-[470px]"
                   onMouseEnter={() => setIsSuccessTwoHovered(true)}
                   onMouseLeave={() => setIsSuccessTwoHovered(false)}
                 >
@@ -644,7 +644,7 @@ export default function Home() {
                 </article>
 
                 <article
-                  className="success-3 rounded-3xl border border-white/15 bg-[rgba(18,17,17,0.62)] hover:bg-[rgba(255,102,56,0.20)] p-6 backdrop-blur-[1px] lg:-mt-[60px] lg:max-w-[470px] ml-0 xl:ml-10"
+                  className="success-3 rounded-3xl border border-white/15 bg-[rgba(18,17,17,0.62)] hover:bg-[#46A4DB]/27 p-6 backdrop-blur-[1px] lg:-mt-[60px] lg:max-w-[470px] ml-0 xl:ml-10"
                   onMouseEnter={() => setIsSuccessThreeHovered(true)}
                   onMouseLeave={() => setIsSuccessThreeHovered(false)}
                 >
