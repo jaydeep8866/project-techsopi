@@ -127,15 +127,15 @@ function Header() {
   }, [menuOpen]);
 
   return (
-    <header className="fixed z-50 font-helvetica-neue w-full bg-transparent text-white pt-4">
-      <div className="relative mx-auto flex w-full max-w-350 items-center justify-between px-3.5 py-2 rounded-4xl border-1 border-zinc-800 bg-black/40 backdrop-blur-[2px]">
+    <header className="fixed z-50 font-helvetica-neue w-full bg-transparent text-white md:pt-4">
+      <div className="relative mx-auto flex w-full max-w-350 items-center justify-between px-3.5 py-2 md:rounded-4xl border-1 border-zinc-800 bg-black/40 backdrop-blur-[2px]">
         <div className="navbar7_logo flex items-center">
           <Link href="/" aria-label="home" className="inline-flex items-center">
             <Image
               loading="lazy"
               src={logo}
               alt="Altimetrik Logo"
-              className="h-auto w-[170px]"
+              className="h-auto w-[120px] md:w-[170px]"
             />
           </Link>
         </div>
@@ -146,9 +146,9 @@ function Header() {
           aria-expanded={menuOpen}
           aria-controls="mobile-nav-panel"
           onClick={() => setMenuOpen((prev) => !prev)}
-          className="header-mobile-toggle inline-flex h-11 w-11 items-center justify-center rounded-full border border-white text-zinc-100 transition-colors hover:bg-white"
+          className="header-mobile-toggle inline-flex h-11 w-11 items-center justify-center md:rounded-full md:border md:border-white text-zinc-100 transition-colors hover:bg-white"
         >
-          <span className="relative block h-4 w-5">
+          <span className="relative block h-4 w-5 opacity-70">
             <span
               className={`absolute left-0 top-0 block h-[2px] w-5 bg-current transition-transform duration-300 border-1 border-white ${
                 menuOpen ? "translate-y-[7px] rotate-45" : ""
