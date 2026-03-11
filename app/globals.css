@@ -8,7 +8,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-helvetica-neue);
+  --font-sans: var(--font-inter);
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
 }
@@ -31,45 +31,49 @@ textarea,
 select {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-helvetica-neue), Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, sans-serif;
   font-synthesis: none;
   background: #000;
 }
 
+.font-inter {
+  font-family: var(--font-inter), Arial, sans-serif;
+}
+
 .font-helvetica-neue {
-  font-family: var(--font-helvetica-neue), Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
 }
 
 .font-hn-light {
-  font-family: var(--font-helvetica-neue-light), Arial, Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: var(--font-inter);
+  font-weight: 400;
 }
 
 .font-hn-regular {
-  font-family: var(--font-helvetica-neue-regular), Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
   font-weight: 400;
 }
 
 .font-hn-medium {
-  font-family: var(--font-helvetica-neue-medium), Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
   font-weight: 500;
 }
 
-/* Ensure common Tailwind weight utilities pick the intended local font file. */
+/* Map common Tailwind weight utilities to Inter weights. */
 .font-light {
-  font-family: var(--font-helvetica-neue-light), Arial, Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: var(--font-inter);
+  font-weight: 400;
 }
 
 .font-normal {
-  font-family: var(--font-helvetica-neue-regular), Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
   font-weight: 400;
 }
 
 .font-medium,
 .font-semibold,
 .font-bold {
-  font-family: var(--font-helvetica-neue-medium), Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
 }
 
 .font-medium {
@@ -84,8 +88,8 @@ select {
   font-weight: 700;
 }
 
-.font-georgia {
-  font-family: var(--font-helvetica-neue), Arial, Helvetica, sans-serif;
+.font-adamina {
+  font-family: var(--font-adamina), Georgia, serif;
 }
 
 .header-desktop-nav {

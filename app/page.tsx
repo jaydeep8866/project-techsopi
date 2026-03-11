@@ -343,13 +343,13 @@ export default function Home() {
             <div className=" sm:p-8 pb-0">
               <div className="flex items-center justify-between gap-8 flex-col lg:flex-row">
                 <div className="text-white w-full lg:w-1/2">
-                  <h1 className="text-4xl leading-tight sm:text-5xl text-orange-500 font-hn-medium">
+                  <h1 className="text-4xl leading-tight sm:text-5xl text-orange-500 font-inter font-bold">
                     {slides[activeSlide].title}
                   </h1>
-                  <p className="mt-4 max-w-xl text-xl leading-snug text-white/90 sm:text-2xl font-hn-light">
+                  <p className="mt-4 max-w-xl text-xl leading-snug text-white/90 sm:text-2xl font-inter font-normal">
                     {slides[activeSlide].description}
                   </p>
-                  <button className="mt-8 rounded-full bg-orange-500 px-7 py-3 text-sm text-black transition hover:cursor-pointer hover:bg-orange-400 font-hn-medium">
+                  <button className="mt-8 rounded-full bg-orange-500 px-7 py-3 text-sm text-black transition hover:cursor-pointer hover:bg-orange-400 font-inter font-normal">
                     {slides[activeSlide].cta}
                   </button>
                 </div>
@@ -402,11 +402,11 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/95" />
 
                   <div className="relative z-10 flex h-full flex-col p-5 sm:p-6">
-                    <p className="text-sm font-semibold uppercase tracking-wide text-orange-500">
+                    <p className="text-sm font-inter font-semibold uppercase tracking-wide text-orange-500">
                       {card.label}
                     </p>
 
-                    <h3 className="mt-5 text-2xl font-medium leading-[1.25] text-white">
+                    <h3 className="mt-5 text-2xl font-inter font-medium leading-[1.25] text-white">
                       {card.title}
                     </h3>
 
@@ -414,7 +414,9 @@ export default function Home() {
                       href={card.href}
                       className="mt-auto flex translate-y-2 items-center justify-between text-orange-500 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
                     >
-                      <span className="text-base font-semibold">READ MORE</span>
+                      <span className="text-base font-inter font-semibold">
+                        READ MORE
+                      </span>
                       <span className="text-[30px] leading-none">→</span>
                     </Link>
                   </div>
@@ -428,14 +430,14 @@ export default function Home() {
           <div className="pointer-events-none absolute inset-y-0 left-0 w-[280px]" />
 
           <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
-            <h2 className="text-center text-4xl  text-white sm:text-6xl font-hn-medium">
+            <h2 className="text-center text-4xl  text-white sm:text-6xl font-inter font-semibold">
               Industry-Leading{" "}
-              <span className="text-orange-500 font-hn-medium">
+              <span className="text-orange-500 font-inter font-semibold">
                 Technologies
               </span>
             </h2>
 
-            <p className="text-center text-xl my-5 text-white/50 max-w-3xl mx-auto font-hn-light">
+            <p className="text-center text-xl my-5 text-white/50 max-w-3xl mx-auto font-inter font-normal">
               Our expertise spans across modern frameworks and platforms to
               deliver cutting-edge solutions that drive innovation and business
               growth.
@@ -469,11 +471,11 @@ export default function Home() {
           <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
               <div className="flex flex-col items-start gap-0">
-                <h2 className="max-w-3xl text-4xl font-medium leading-tight text-white sm:text-6xl">
+                <h2 className="max-w-3xl text-4xl font-inter font-semibold leading-tight text-white sm:text-6xl">
                   Trusted by Industry
                   <span className="text-orange-500"> Leaders</span>
                 </h2>
-                <p className="text-left text-xl my-5 text-white/50 max-w-3xl mx-auto font-hn-light">
+                <p className="text-left text-xl my-5 text-white/50 max-w-3xl mx-auto font-inter font-normal">
                   We're proud to work with innovative companies across various
                   industries, helping them achieve their digital transformation
                   goals and business success.
@@ -497,10 +499,10 @@ export default function Home() {
                   />
 
                   <div className="mt-5">
-                    <h3 className="text-2xl font-hn-medium text-orange-500 capitalize ">
+                    <h3 className="text-2xl font-inter font-normal text-orange-500 capitalize ">
                       {accelerator.title}
                     </h3>
-                    <p className="mt-1 text-xl font-hn-light text-white flex items-center">
+                    <p className="mt-1 text-xl font-inter font-normal text-white flex items-center">
                       – {accelerator.subtitle}
                     </p>
                   </div>
@@ -514,7 +516,7 @@ export default function Home() {
           <div className="pointer-events-none absolute inset-0 " />
 
           <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
-            <h2 className="text-5xl font-medium text-white sm:text-[55px]">
+            <h2 className="text-5xl font-inter font-semibold text-white sm:text-[55px]">
               Excellence in Every Project
             </h2>
 
@@ -529,7 +531,7 @@ export default function Home() {
                         : "border-white/15 bg-black/60"
                     }`}
                   >
-                    <h3 className="text-lg font-hn-light text-white sm:text-xl">
+                    <h3 className="text-lg font-inter font-normal  text-white/70 sm:text-xl">
                       {card.title}
                     </h3>
                     {/* <p className="mt-3 max-w-full text-xl leading-relaxed text-white/85 sm:text-lg sm:leading-[1.35]">
@@ -558,9 +560,11 @@ export default function Home() {
           <div className="pointer-events-none absolute inset-0 " />
 
           <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
-            <h2 className="text-center text-4xl font-medium text-white sm:text-6xl">
-              <span className="text-orange-500">Your success</span> is our
-              purpose
+            <h2 className="text-center text-4xl font-inter font-semibold text-white sm:text-6xl">
+              <span className="text-orange-500 font-inter font-semibold">
+                Your success
+              </span>{" "}
+              is our purpose
             </h2>
 
             <div className="relative mt-12 lg:min-h-[650px]">
@@ -600,10 +604,10 @@ export default function Home() {
                   onMouseEnter={() => setIsSuccessOneHovered(true)}
                   onMouseLeave={() => setIsSuccessOneHovered(false)}
                 >
-                  <h3 className="text-2xl font-medium text-white">
+                  <h3 className="text-2xl font-interfont-medium text-white">
                     Services to drive digital growth
                   </h3>
-                  <p className="hidden md:block mt-4 text-base leading-relaxed text-white/70 font-hn-light">
+                  <p className="hidden md:block mt-4 text-base leading-relaxed text-white/70 font-inter font-normal">
                     Our digital enablement services redefine what's possible and
                     deliver outcomes with greater consistency, scale, and speed.
                   </p>
@@ -611,7 +615,7 @@ export default function Home() {
                     href="/services"
                     className="mt-10 flex justify-between items-center gap-3 text-sm font-normal uppercase text-white "
                   >
-                    <span className="underline font-hn-medium">
+                    <span className="underline font-inter font-medium">
                       Explore Services
                     </span>
                     <span className="text-3xl leading-none">→</span>
@@ -677,7 +681,7 @@ export default function Home() {
           <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.2fr]">
               <div>
-                <h2 className="text-5xl font-medium leading-tight text-white sm:text-7xl">
+                <h2 className="text-5xl font-semibold font-inter leading-tight text-white sm:text-7xl">
                   <span className="text-orange-500">Techsopi</span>
                   <br />
                   by the numbers
@@ -690,10 +694,10 @@ export default function Home() {
               >
                 {byTheNumbers.map((item, index) => (
                   <div key={item.label}>
-                    <p className="font-georgia text-6xl leading-none text-white sm:text-7xl font-hn-medium">
+                    <p className="font-adamina text-6xl leading-none text-white sm:text-7xl ">
                       {animatedNumbers[index]}
                     </p>
-                    <p className="mt-3 text-2xl font-hn-light text-white/90 sm:text-3xl">
+                    <p className="mt-3 text-2xl font-inter font-normal text-white/90 sm:text-3xl">
                       {item.label}
                     </p>
                   </div>
@@ -717,12 +721,12 @@ export default function Home() {
 
         <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="mx-auto flex max-w-6xl flex-col items-center text-center">
-            <h2 className="text-5xl font-medium leading-tight text-white sm:text-5xl">
+            <h2 className="text-5xl font-inter font-semibold leading-tight text-white sm:text-5xl">
               Ready to Transform
               <span className="text-orange-500"> Your Business?</span>
             </h2>
 
-            <p className="font-hn-light mt-5 max-w-3xl text-xl leading-relaxed text-white/90 sm:text-2xl sm:leading-[1.35]">
+            <p className="font-inter font-normal mt-5 max-w-3xl text-xl leading-relaxed text-white/90 sm:text-2xl sm:leading-[1.35]">
               Let's discuss how our IT solutions can help you achieve your
               business goals and drive digital transformation. Contact us today
               for a free consultation.
@@ -730,7 +734,7 @@ export default function Home() {
 
             <Link
               href="/contact-us"
-              className="mt-10 inline-flex font-medium items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-normal uppercase tracking-wide text-black transition hover:bg-white/90"
+              className="mt-10 inline-flex font-inter items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-normal uppercase tracking-wide text-black transition hover:bg-white/90"
             >
               Contact Our AI Experts
             </Link>

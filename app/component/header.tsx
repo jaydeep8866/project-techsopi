@@ -127,7 +127,7 @@ function Header() {
   }, [menuOpen]);
 
   return (
-    <header className="fixed z-50 font-helvetica-neue w-full bg-transparent text-white md:pt-4">
+    <header className="fixed z-50 font-inter w-full bg-transparent text-white md:pt-4">
       <div className="relative mx-auto flex w-full max-w-350 items-center justify-between px-3.5 py-2 md:rounded-4xl border-1 border-zinc-800 bg-black/40 backdrop-blur-[2px]">
         <div className="navbar7_logo flex items-center">
           <Link href="/" aria-label="home" className="inline-flex items-center">
@@ -168,7 +168,7 @@ function Header() {
         </button>
 
         <nav aria-label="Main navigation" className="header-desktop-nav">
-          <ul className="flex flex-wrap items-center justify-end gap-6 text-sm font-hn-medium uppercase tracking-wide text-zinc-100">
+          <ul className="flex flex-wrap items-center justify-end gap-6 text-sm font-inter font-medium uppercase tracking-wide text-zinc-100">
             {navItems.slice(0, 2).map((item) => (
               <li key={item.href}>
                 <Link
@@ -215,7 +215,7 @@ function Header() {
                           </h3>
                           <span className="text-2xl text-zinc-300">→</span>
                         </div>
-                        <p className="font-georgia text-base normal-case tracking-normal text-zinc-400">
+                        <p className="font-inter font-normal text-base normal-case tracking-normal text-zinc-400">
                           {item.description}
                         </p>
                       </Link>
@@ -228,7 +228,7 @@ function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="transition-colors hover:text-white/80 font-hn-medium"
+                  className="transition-colors hover:text-white/80 font-inter font-medium"
                 >
                   {item.label}
                 </Link>

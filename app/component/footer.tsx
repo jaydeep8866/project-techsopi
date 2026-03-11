@@ -146,7 +146,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5">
           {footerColumns.map((column) => (
             <div key={column.title}>
-              <h3 className="text-xl font-medium leading-tight text-white sm:text-[25px]">
+              <h3 className="text-xl font-inter font-medium leading-tight text-white sm:text-[25px] mb-3">
                 {column.title}
               </h3>
               <ul className="mt-2 space-y-1">
@@ -154,7 +154,7 @@ export default function Footer() {
                   <li key={item.label}>
                     <Link
                       href={item.href}
-                      className="text-[14px] leading-tight text-white/90 transition-colors hover:text-white font-hn-light"
+                      className="text-[14px] leading-tight text-white/90 transition-colors hover:text-white font-inter font-normal"
                     >
                       {item.label}
                     </Link>
@@ -180,7 +180,7 @@ export default function Footer() {
               />
             </Link>
 
-            <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-white/90 font-hn-light">
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-white/90 font-inter font-normal">
               <span>© 2026 Techsopi</span>
               {legalLinks.map((item) => (
                 <Link

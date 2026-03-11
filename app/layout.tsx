@@ -1,47 +1,21 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Adamina, Inter } from "next/font/google";
 import Header from "./component/header";
 import Footer from "./component/footer";
 import SmoothScroll from "./component/smooth-scroll";
 import "./globals.css";
 
-const helveticaNeue = localFont({
-  src: [
-    {
-      path: "../public/fonts/HelveticaNeue-Light.woff",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/HelveticaNeueRegular.woff",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../public/fonts/HelveticaNeue-Medium.woff",
-      weight: "500",
-      style: "normal",
-    },
-  ],
-  variable: "--font-helvetica-neue",
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-inter",
   display: "swap",
 });
 
-const helveticaNeueLight = localFont({
-  src: "../public/fonts/HelveticaNeue-Light.woff",
-  variable: "--font-helvetica-neue-light",
-  display: "swap",
-});
-
-const helveticaNeueRegular = localFont({
-  src: "../public/fonts/HelveticaNeueRegular.woff",
-  variable: "--font-helvetica-neue-regular",
-  display: "swap",
-});
-
-const helveticaNeueMedium = localFont({
-  src: "../public/fonts/HelveticaNeue-Medium.woff",
-  variable: "--font-helvetica-neue-medium",
+const adamina = Adamina({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-adamina",
   display: "swap",
 });
 
@@ -57,9 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${helveticaNeue.className} ${helveticaNeue.variable} ${helveticaNeueLight.variable} ${helveticaNeueRegular.variable} ${helveticaNeueMedium.variable} antialiased`}
-      >
+      <body className={`${inter.variable} ${adamina.variable} antialiased`}>
         <SmoothScroll />
         <Header />
         {children}
