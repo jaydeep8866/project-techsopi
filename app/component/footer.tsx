@@ -139,75 +139,111 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden  bg-black pt-20 text-white">
-      <div className="pointer-events-none absolute inset-0 " />
+    <>
+      <section className="ready-business relative overflow-hidden bg-black  py-20 sm:py-28">
+        <video
+          className="absolute inset-0 h-full w-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/video/video-bg.webm" type="video/webm" />
+        </video>
+        <div className="pointer-events-none absolute inset-0 " />
 
-      <div className="relative mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5">
-          {footerColumns.map((column) => (
-            <div key={column.title}>
-              <h3 className="text-xl font-inter font-medium leading-tight text-white sm:text-[25px] mb-3">
-                {column.title}
-              </h3>
-              <ul className="mt-2 space-y-1">
-                {column.links.map((item) => (
-                  <li key={item.label}>
-                    <Link
-                      href={item.href}
-                      className="text-[14px] leading-tight text-white/90 transition-colors hover:text-white font-inter font-normal"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+        <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto flex max-w-6xl flex-col items-center text-center">
+            <h2 className="text-5xl font-inter font-semibold leading-tight text-white sm:text-5xl">
+              Ready to Transform
+              <span className="text-orange-500"> Your Business?</span>
+            </h2>
 
-        <div className="mt-16 border-t border-white/15 pt-10 pb-12">
-          <div className="flex flex-col gap-8 xl:flex-row xl:items-center xl:justify-between">
+            <p className="font-inter font-normal mt-5 max-w-3xl text-xl leading-relaxed text-white/90 sm:text-2xl sm:leading-[1.35]">
+              Let's discuss how our IT solutions can help you achieve your
+              business goals and drive digital transformation. Contact us today
+              for a free consultation.
+            </p>
+
             <Link
-              href="/"
-              aria-label="Altimetrik home"
-              className="inline-flex items-center"
+              href="/contact-us"
+              className="mt-10 inline-flex font-inter items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-normal uppercase tracking-wide text-black transition hover:bg-white"
             >
-              <Image
-                src={logo}
-                alt="Altimetrik Logo"
-                className="h-auto w-40"
-                priority={false}
-              />
+              Contact Our AI Experts
             </Link>
+          </div>
+        </div>
+      </section>
+      <footer className="relative overflow-hidden  bg-black pt-20 text-white">
+        <div className="pointer-events-none absolute inset-0 " />
 
-            <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-white/90 font-inter font-normal">
-              <span>© 2026 Techsopi</span>
-              {legalLinks.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="transition-colors hover:text-white font-hn-light"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
+        <div className="relative mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5">
+            {footerColumns.map((column) => (
+              <div key={column.title}>
+                <h3 className="text-xl font-inter font-medium leading-tight text-white sm:text-[25px] mb-3">
+                  {column.title}
+                </h3>
+                <ul className="mt-2 space-y-1">
+                  {column.links.map((item) => (
+                    <li key={item.label}>
+                      <Link
+                        href={item.href}
+                        className="text-[14px] leading-tight text-white/90 transition-colors hover:text-white font-inter font-normal"
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
 
-            <div className="flex items-center gap-7 text-white/95">
-              {socialLinks.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  aria-label={item.label}
-                  className="transition-colors hover:text-white/70"
-                >
-                  {item.icon}
-                </Link>
-              ))}
+          <div className="mt-16 border-t border-white/15 pt-10 pb-12">
+            <div className="flex flex-col gap-8 xl:flex-row xl:items-center xl:justify-between">
+              <Link
+                href="/"
+                aria-label="Altimetrik home"
+                className="inline-flex items-center"
+              >
+                <Image
+                  src={logo}
+                  alt="Altimetrik Logo"
+                  className="h-auto w-40"
+                  priority={false}
+                />
+              </Link>
+
+              <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-white/90 font-inter font-normal">
+                <span>© 2026 Techsopi</span>
+                {legalLinks.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    className="transition-colors hover:text-white font-hn-light"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+
+              <div className="flex items-center gap-7 text-white/95">
+                {socialLinks.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    aria-label={item.label}
+                    className="transition-colors hover:text-white/70"
+                  >
+                    {item.icon}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 }

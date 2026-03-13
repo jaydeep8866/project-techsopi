@@ -281,7 +281,7 @@ function Header() {
             <li>
               <Link
                 href="/contact-us"
-                className="inline-flex rounded-full bg-white px-5 py-2 text-sm font-hn-medium uppercase tracking-wide text-black transition-colors hover:bg-zinc-200"
+                className="inline-flex rounded-full bg-white px-5 py-2 text-sm font-hn-medium uppercase tracking-wide text-black transition-colors hover:bg-white"
               >
                 Contact Us
               </Link>
@@ -359,7 +359,7 @@ function Header() {
             <li data-mobile-item>
               <Link
                 href="/contact-us"
-                className="mt-3 inline-flex rounded-full bg-white px-5 py-2 text-sm font-hn-medium uppercase tracking-wide text-black transition-colors hover:bg-zinc-200"
+                className="mt-3 inline-flex rounded-full bg-white px-5 py-2 text-sm font-hn-medium uppercase tracking-wide text-black transition-colors hover:bg-white"
                 onClick={() => setMenuOpen(false)}
               >
                 Contact Us
