@@ -10,6 +10,7 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us" },
   { label: "Products", href: "/products" },
+  { label: "Industries", href: "/industies" },
   { label: "Technologies", href: "/technologies" },
   { label: "Career", href: "/career" },
   { label: "Blog", href: "/blog" },
@@ -18,37 +19,37 @@ const navItems = [
 const industryItems = [
   {
     label: "VanSales - AI Mobile Sales",
-    href: "/industies/vansales-ai-mobile-sales",
+    href: "/products/vansales-ai-mobile-sales",
     description:
       "AI-assisted field sales mobility platform for faster, smarter selling.",
   },
   {
     label: "Merchandising Platform",
-    href: "/industies/merchandising-platform",
+    href: "/products/merchandising-platform",
     description:
       "Centralized merchandising workflows for planning, execution, and tracking.",
   },
   {
     label: "HRMS Solution",
-    href: "/industies/hrms-solution",
+    href: "/products/hrms-solution",
     description:
       "Integrated HR management for employee lifecycle and payroll operations.",
   },
   {
     label: "Admission & Fees Management",
-    href: "/industies/admission-fees-management",
+    href: "/products/admission-fees-management",
     description:
       "End-to-end admissions and fee collection with streamlined operations.",
   },
   {
     label: "CRM Platform",
-    href: "/industies/crm-platform",
+    href: "/products/crm-platform",
     description:
       "Customer relationship workflows for lead management and retention.",
   },
   {
     label: "Billing Software",
-    href: "/industies/billing-software",
+    href: "/products/billing-software",
     description:
       "Automated invoicing, payments, and billing reconciliation tools.",
   },
@@ -94,7 +95,7 @@ function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
   const mobileMenuInnerRef = useRef<HTMLDivElement | null>(null);
 
@@ -162,7 +163,7 @@ function Header() {
   useEffect(() => {
     if (!menuOpen) {
       setMobileServicesOpen(false);
-      setMobileIndustriesOpen(false);
+      setMobileProductsOpen(false);
     }
   }, [menuOpen]);
 
@@ -208,7 +209,7 @@ function Header() {
         </button>
 
         <nav aria-label="Main navigation" className="header-desktop-nav">
-          <ul className="flex flex-wrap items-center justify-end gap-6 text-sm font-inter font-medium uppercase tracking-wide text-zinc-100">
+          <ul className="flex flex-wrap items-center justify-end gap-4 text-sm font-inter font-medium uppercase tracking-wide text-zinc-100">
             {navItems.slice(0, 2).map((item) => (
               <li key={item.href}>
                 <Link
@@ -222,7 +223,7 @@ function Header() {
             <li className="group static">
               <Link
                 href="/services"
-                className="inline-flex items-center gap-1 rounded-md  px-3 py-2 transition-colors hover:bg-zinc-700 font-hn-medium"
+                className="inline-flex items-center gap-1 rounded-md  px-0 py-2 transition-colors hover:bg-zinc-700 font-hn-medium"
               >
                 Services
                 <svg
@@ -266,10 +267,10 @@ function Header() {
             </li>
             <li className="group static">
               <Link
-                href="/industies"
-                className="inline-flex items-center gap-1 rounded-md px-3 py-2 transition-colors hover:bg-zinc-700 font-hn-medium"
+                href="/products"
+                className="inline-flex items-center gap-1 rounded-md px-0 py-2 transition-colors hover:bg-zinc-700 font-hn-medium"
               >
-                Industries
+                Products
                 <svg
                   className="h-4 w-4 transition-transform group-hover:rotate-180"
                   viewBox="0 0 20 20"
@@ -309,7 +310,7 @@ function Header() {
                 </ul>
               </div>
             </li>
-            {navItems.slice(2).map((item) => (
+            {navItems.slice(3).map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
@@ -383,17 +384,19 @@ function Header() {
       >
         <div ref={mobileMenuInnerRef} className="px-4 py-4">
           <ul className="space-y-1 text-sm uppercase tracking-wide text-zinc-100">
-            {navItems.map((item) => (
-              <li key={`mobile-${item.href}`} data-mobile-item>
-                <Link
-                  href={item.href}
-                  className="block rounded-xl px-3 py-2 font-hn-medium transition-colors hover:bg-zinc-800"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            {navItems
+              .filter((item) => item.href !== "/products")
+              .map((item) => (
+                <li key={`mobile-${item.href}`} data-mobile-item>
+                  <Link
+                    href={item.href}
+                    className="block rounded-xl px-3 py-2 font-hn-medium transition-colors hover:bg-zinc-800"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             <li data-mobile-item className="px-3 pt-2">
               <button
                 type="button"
@@ -444,17 +447,17 @@ function Header() {
             <li data-mobile-item className="px-3 pt-2">
               <button
                 type="button"
-                onClick={() => setMobileIndustriesOpen((prev) => !prev)}
-                aria-expanded={mobileIndustriesOpen}
-                aria-controls="mobile-industries-submenu"
+                onClick={() => setMobileProductsOpen((prev) => !prev)}
+                aria-expanded={mobileProductsOpen}
+                aria-controls="mobile-products-submenu"
                 className="flex w-full items-center justify-between rounded-xl py-2 text-left text-xs text-zinc-400 transition-colors hover:bg-zinc-800"
               >
                 <span className="uppercase text-sm text-white font-hn-medium">
-                  Industries
+                  Products
                 </span>
                 <svg
                   className={`h-4 w-4 transition-transform duration-200 ${
-                    mobileIndustriesOpen ? "rotate-180" : "rotate-0"
+                    mobileProductsOpen ? "rotate-180" : "rotate-0"
                   }`}
                   viewBox="0 0 20 20"
                   fill="none"
@@ -471,11 +474,11 @@ function Header() {
                 </svg>
               </button>
             </li>
-            {mobileIndustriesOpen && (
+            {mobileProductsOpen && (
               <li>
-                <ul id="mobile-industries-submenu" className="space-y-1 pl-5">
+                <ul id="mobile-products-submenu" className="space-y-1 pl-5">
                   {industryItems.map((item) => (
-                    <li key={`mobile-industry-${item.href}`} data-mobile-item>
+                    <li key={`mobile-product-${item.href}`} data-mobile-item>
                       <Link
                         href={item.href}
                         className="font-hn-medium block rounded-xl px-3 py-2 uppercase text-sm text-white transition-colors hover:bg-zinc-800"

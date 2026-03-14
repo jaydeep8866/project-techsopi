@@ -3,19 +3,19 @@ import Link from "next/link";
 const industryItems = [
   {
     label: "VanSales - AI Mobile Sales",
-    href: "/industies/vansales-ai-mobile-sales",
+    href: "/products/vansales-ai-mobile-sales",
   },
   {
     label: "Merchandising Platform",
-    href: "/industies/merchandising-platform",
+    href: "/products/merchandising-platform",
   },
-  { label: "HRMS Solution", href: "/industies/hrms-solution" },
+  { label: "HRMS Solution", href: "/products/hrms-solution" },
   {
     label: "Admission & Fees Management",
-    href: "/industies/admission-fees-management",
+    href: "/products/admission-fees-management",
   },
-  { label: "CRM Platform", href: "/industies/crm-platform" },
-  { label: "Billing Software", href: "/industies/billing-software" },
+  { label: "CRM Platform", href: "/products/crm-platform" },
+  { label: "Billing Software", href: "/products/billing-software" },
 ];
 
 export default function IndustiesPage() {

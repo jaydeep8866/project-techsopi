@@ -12,6 +12,7 @@ import Image from "next/image";
 import aiImage from "../../../public/images/ai.webp";
 import SpecializedSolutionsSection from "@/app/component/specialized-solutions-section";
 import OurProcessSection from "@/app/component/our-process-section";
+import ServiceMainSection from "@/app/component/services-main-section";
 
 const specializedSolutions = [
   {
@@ -83,25 +84,8 @@ export default function StaffAugmentationPage() {
   return (
     <main className="mx-auto w-full  px-0 py-10">
       <div className="pt-0 md:pt-20 new-combine bg-black bg-[url('/images/service-bg-inner.webp')]  bg-no-repeat bg-cover bg-bottom md:bg-right">
-        <section className="relative overflow-hidden  pt-16 sm:py-20">
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-[260px] " />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[220px] " />
-
-          <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-              <div className="flex flex-col items-start gap-0">
-                <h2 className="max-w-3xl text-4xl font-inter font-semibold leading-tight text-white sm:text-6xl">
-                  Our
-                  <span className="text-orange-500"> Services</span>
-                </h2>
-                <p className="text-left text-base my-5 text-white/50 max-w-3xl mx-auto font-inter font-normal">
-                  Comprehensive IT solutions designed to accelerate your
-                  business growth and digital transformation journey with
-                  cutting-edge technology
-                </p>
-              </div>
-            </div>
-          </div>
+        <section className="service-main">
+          <ServiceMainSection activeHref="/services/staff-augmentation" />
         </section>
 
         <section className="relative overflow-hidden  pt-16 sm:py-20">
