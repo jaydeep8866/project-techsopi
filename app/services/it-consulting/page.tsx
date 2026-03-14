@@ -10,6 +10,8 @@
 
 import Image from "next/image";
 import aiImage from "../../../public/images/ai.webp";
+import SpecializedSolutionsSection from "@/app/component/specialized-solutions-section";
+import OurProcessSection from "@/app/component/our-process-section";
 
 const specializedSolutions = [
   {
@@ -80,8 +82,8 @@ const processSteps = [
 export default function ItConsultingPage() {
   return (
     <main className="mx-auto w-full  px-0 py-10">
-      <div className="pt-20 new-combine bg-black bg-[url('/images/service-bg-inner.webp')]  bg-no-repeat bg-cover">
-        <section className="relative overflow-hidden  py-16 sm:py-20">
+      <div className="pt-20 new-combine bg-black bg-[url('/images/service-bg-inner.webp')]  bg-no-repeat bg-cover bg-bottom md:bg-right">
+        <section className="relative overflow-hidden  pt-16 sm:py-20">
           <div className="pointer-events-none absolute inset-y-0 left-0 w-[260px] " />
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[220px] " />
 
@@ -92,7 +94,7 @@ export default function ItConsultingPage() {
                   Our
                   <span className="text-orange-500"> Services</span>
                 </h2>
-                <p className="text-left text-xl my-5 text-white/50 max-w-3xl mx-auto font-inter font-normal">
+                <p className="text-left text-base my-5 text-white/50 max-w-3xl mx-auto font-inter font-normal">
                   Comprehensive IT solutions designed to accelerate your
                   business growth and digital transformation journey with
                   cutting-edge technology
@@ -102,7 +104,7 @@ export default function ItConsultingPage() {
           </div>
         </section>
 
-        <section className="relative overflow-hidden  py-16 sm:py-20">
+        <section className="relative overflow-hidden  pt-16 sm:py-20">
           <div className="pointer-events-none absolute inset-y-0 left-0 w-[260px] " />
 
           <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
@@ -111,10 +113,10 @@ export default function ItConsultingPage() {
                 <p className="w-full text-center text-white/70 font-inter font-medium text-sm uppercase tracking-wide">
                   Core Services
                 </p>
-                <h2 className="mx-auto max-w-3xl text-4xl font-inter font-semibold leading-tight text-white sm:text-6xl">
+                <h2 className="mx-auto max-w-3xl text-2xl md:text-4xl font-inter font-semibold leading-tight text-white sm:text-6xl">
                   Flagship Solutions
                 </h2>
-                <p className="text-center text-xl my-5 text-white max-w-3xl mx-auto font-inter font-normal">
+                <p className="text-center text-base my-5 text-white max-w-3xl mx-auto font-inter font-normal">
                   Our flagship services that form the foundation of our IT
                   solutions portfolio, designed to drive innovation and business
                   success.
@@ -128,30 +130,30 @@ export default function ItConsultingPage() {
         <section className="software-development relative overflow-hidden py-16 sm:py-20">
           <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-8 ">
-              <div className="max-w-2xl border border-white/15 bg-[rgba(18,17,17,0.5)] p-8 rounded-3xl">
-                <h3 className="text-4xl font-semibold leading-[1.05] text-white sm:text-5xl md:text-5xl">
+              <div className="max-w-2xl border border-white/15 bg-[rgba(18,17,17,0.5)] p-4 md:p-8 rounded-3xl">
+                <h3 className="text-3xl font-semibold leading-[1.05] text-white sm:text-5xl md:text-5xl">
                   IT Consulting
                 </h3>
 
-                <p className="mt-7 max-w-xl text-lg leading-relaxed text-white/70 sm:text-2xl">
+                <p className="mt-7 max-w-xl text-base leading-relaxed text-white/70 sm:text-2xl">
                   Strategic technology guidance to optimize your IT
                   infrastructure and drive digital transformation.
                 </p>
 
-                <h3 className="mt-5 text-2xl mb-3 text-[#46a3db] font-inter font-medium">
+                <h3 className="mt-5 text-xl md:text-2xl mb-3 text-[#46a3db] font-inter font-medium">
                   Key Features:
                 </h3>
-                <ul className="font-inter font-normal flex flex-col gap-3 list-disc list-inside text-lg leading-relaxed text-white/70 sm:text-lg mb-3">
+                <ul className="font-inter font-normal flex flex-col gap-3 list-disc list-inside text-base leading-relaxed text-white/70 sm:text-lg mb-3">
                   <li>Technology Strategy</li>
                   <li>Digital Transformation</li>
                   <li>Architecture Design</li>
                   <li>Security Assessment</li>
                   <li>Performance Optimization</li>
                 </ul>
-                <h3 className="mt-5 text-2xl mb-3 text-[#46a3db] font-inter font-medium">
+                <h3 className="mt-5 text-xl md:text-2xl mb-3 text-[#46a3db] font-inter font-medium">
                   Technologies:
                 </h3>
-                <ul className="flex flex-wrap gap-3 mt-2">
+                <ul className="flex flex-wrap gap-3 mt-2 text-base">
                   <li className="py-2 rounded-3xl border border-white/15 bg-[rgba(18,17,17,0.5)] px-6 text-white hover:bg-[#46A4DB]/27 transition-colors flex items-center justify-center cursor-pointer">
                     Enterprise Architecture
                   </li>
@@ -180,83 +182,22 @@ export default function ItConsultingPage() {
           </div>
         </section>
 
-        <section className="specialize-solution relative overflow-hidden py-16 sm:py-20">
-          <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-4xl text-center">
-              <p className="inline-flex items-center rounded-full border border-[#46a3db]/35 bg-[#46a3db]/15 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-[#7ac8f3]">
-                Additional Services
-              </p>
-              <h2 className="mt-5 text-4xl font-semibold leading-tight text-white sm:text-6xl">
-                Specialized <span className="text-orange-500">Solutions</span>
-              </h2>
-              <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/70 sm:text-lg font-inter font-normal">
-                Focused service modules that complement our core engineering
-                offerings and solve high-impact business needs.
-              </p>
-            </div>
+        <SpecializedSolutionsSection
+          items={specializedSolutions}
+          sectionClassName="specialize-solution relative overflow-hidden pb-16 sm:py-20"
+          cardClassName="p-3 rounded-md md:rounded-3xl border border-white/10 bg-[rgba(15,15,17,0.65)] md:p-7 shadow-[0_8px_28px_rgba(0,0,0,0.22)] backdrop-blur transition-all hover:border-[#46a3db]/45 hover:bg-[#46A4DB]/27"
+          titleClassName="text-xl font-semibold leading-snug text-[#46a3db] sm:text-2xl font-inter"
+          descriptionClassName="mt-2 md:mt-4 text-sm leading-relaxed text-white/70 font-inter font-normal"
+        />
 
-            <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {specializedSolutions.map((item) => (
-                <article
-                  key={item.title}
-                  className="rounded-3xl border border-white/10 bg-[rgba(15,15,17,0.65)] p-7 shadow-[0_8px_28px_rgba(0,0,0,0.22)] backdrop-blur transition-all  hover:border-[#46a3db]/45 hover:bg-[#46A4DB]/27 transition-colors"
-                >
-                  {/* <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#2b8bff] to-[#7c3dff] text-sm font-semibold tracking-wide text-white">
-                    {item.code}
-                  </div> */}
-                  <h3 className="text-3xl font-semibold leading-snug text-[#46a3db] sm:text-2xl font-inter">
-                    {item.title}
-                  </h3>
-                  <p className="mt-4 text-lg leading-relaxed text-white/70 font-inter font-normal">
-                    {item.description}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="our-process relative overflow-hidden py-16 sm:py-20">
-          <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-4xl text-center">
-              <p className="inline-flex items-center rounded-full border border-orange-500/40 bg-orange-500/10 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-orange-400">
-                Our Process
-              </p>
-              <h2 className="mt-5 text-4xl font-semibold leading-tight text-white sm:text-6xl">
-                Development <span className="text-orange-500">Methodology</span>
-              </h2>
-              <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/70 sm:text-lg font-inter font-normal">
-                We follow a proven methodology to ensure successful project
-                delivery and client satisfaction with transparent communication
-                throughout.
-              </p>
-            </div>
-
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
-              {processSteps.map((step) => (
-                <article
-                  key={step.id}
-                  className="rounded-3xl border border-white/10 bg-[rgba(15,15,17,0.65)] p-7 shadow-[0_8px_28px_rgba(0,0,0,0.22)] backdrop-blur transition-all  hover:border-[#46a3db]/45 hover:bg-[#46A4DB]/20"
-                >
-                  {/* <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-orange-500/30 bg-orange-500/12 text-xs font-semibold tracking-wide text-orange-300">
-                    {step.icon}
-                  </div> */}
-
-                  <div className="mt-5 inline-flex h-16 w-16 items-center justify-center rounded-full border border-white/20 bg-white text-2xl font-semibold text-[#1f4ab8]">
-                    {step.id}
-                  </div>
-
-                  <h3 className="mt-5 text-3xl font-semibold leading-snug text-white sm:text-2xl font-inter">
-                    {step.title}
-                  </h3>
-                  <p className="mt-4 text-lg leading-relaxed text-white/70 font-inter font-normal">
-                    {step.description}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
+        <OurProcessSection
+          items={processSteps}
+          sectionClassName="our-process relative overflow-hidden py-0 md:py-16 sm:py-20"
+          cardClassName="rounded-3xl border border-white/10 bg-[rgba(15,15,17,0.65)] p-4 md:p-7 shadow-[0_8px_28px_rgba(0,0,0,0.22)] backdrop-blur transition-all hover:border-[#46a3db]/45 hover:bg-[#46A4DB]/20"
+          stepIdClassName="mt-0 inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/50 text-2xl font-semibold text-[#1f4ab8]"
+          titleClassName="mt-5 text-xl md:text-3xl font-semibold leading-snug text-white sm:text-2xl font-inter"
+          descriptionClassName="mt-0 md:mt-4 text-sm md:text-lg leading-relaxed text-white/70 font-inter font-normal"
+        />
       </div>
     </main>
   );

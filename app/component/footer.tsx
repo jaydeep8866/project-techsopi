@@ -154,12 +154,12 @@ export default function Footer() {
 
         <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="mx-auto flex max-w-6xl flex-col items-center text-center">
-            <h2 className="text-5xl font-inter font-semibold leading-tight text-white sm:text-5xl">
+            <h2 className="text-3xl md:text-5xl font-inter font-semibold leading-tight text-white sm:text-5xl">
               Ready to Transform
               <span className="text-orange-500"> Your Business?</span>
             </h2>
 
-            <p className="font-inter font-normal mt-5 max-w-3xl text-xl leading-relaxed text-white/90 sm:text-2xl sm:leading-[1.35]">
+            <p className="font-inter font-normal mt-5 max-w-3xl text-base leading-relaxed text-white/90 sm:text-2xl sm:leading-[1.35]">
               Let's discuss how our IT solutions can help you achieve your
               business goals and drive digital transformation. Contact us today
               for a free consultation.

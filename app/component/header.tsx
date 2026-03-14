@@ -10,10 +10,48 @@ const navItems = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us" },
   { label: "Products", href: "/products" },
-  { label: "Industies", href: "/industies" },
   { label: "Technologies", href: "/technologies" },
   { label: "Career", href: "/career" },
   { label: "Blog", href: "/blog" },
+];
+
+const industryItems = [
+  {
+    label: "VanSales - AI Mobile Sales",
+    href: "/industies/vansales-ai-mobile-sales",
+    description:
+      "AI-assisted field sales mobility platform for faster, smarter selling.",
+  },
+  {
+    label: "Merchandising Platform",
+    href: "/industies/merchandising-platform",
+    description:
+      "Centralized merchandising workflows for planning, execution, and tracking.",
+  },
+  {
+    label: "HRMS Solution",
+    href: "/industies/hrms-solution",
+    description:
+      "Integrated HR management for employee lifecycle and payroll operations.",
+  },
+  {
+    label: "Admission & Fees Management",
+    href: "/industies/admission-fees-management",
+    description:
+      "End-to-end admissions and fee collection with streamlined operations.",
+  },
+  {
+    label: "CRM Platform",
+    href: "/industies/crm-platform",
+    description:
+      "Customer relationship workflows for lead management and retention.",
+  },
+  {
+    label: "Billing Software",
+    href: "/industies/billing-software",
+    description:
+      "Automated invoicing, payments, and billing reconciliation tools.",
+  },
 ];
 
 const serviceItems = [
@@ -56,6 +94,7 @@ function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
   const mobileMenuInnerRef = useRef<HTMLDivElement | null>(null);
 
@@ -123,6 +162,7 @@ function Header() {
   useEffect(() => {
     if (!menuOpen) {
       setMobileServicesOpen(false);
+      setMobileIndustriesOpen(false);
     }
   }, [menuOpen]);
 
@@ -214,6 +254,51 @@ function Header() {
                             {item.label}
                           </h3>
                           <span className="text-2xl text-zinc-300">→</span>
+                        </div>
+                        <p className="font-inter font-normal text-base normal-case tracking-normal text-zinc-400">
+                          {item.description}
+                        </p>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+            <li className="group static">
+              <Link
+                href="/industies"
+                className="inline-flex items-center gap-1 rounded-md px-3 py-2 transition-colors hover:bg-zinc-700 font-hn-medium"
+              >
+                Industries
+                <svg
+                  className="h-4 w-4 transition-transform group-hover:rotate-180"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 8L10 13L15 8"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </Link>
+              <div className="invisible absolute left-0 top-[calc(100%+12px)] z-20 w-full rounded-3xl border border-zinc-800 bg-black/95 p-3 opacity-0 shadow-2xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
+                <ul className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
+                  {industryItems.map((item) => (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        className="block h-full rounded-3xl border border-zinc-800 bg-zinc-950 px-6 py-5 transition-colors hover:border-zinc-600 font-hn-medium"
+                      >
+                        <div className="mb-3 flex items-start justify-between gap-4">
+                          <h3 className="text-[22px] font-semibold normal-case tracking-normal text-zinc-100">
+                            {item.label}
+                          </h3>
+                          <span className="text-2xl text-zinc-300">&rarr;</span>
                         </div>
                         <p className="font-inter font-normal text-base normal-case tracking-normal text-zinc-400">
                           {item.description}
@@ -344,6 +429,53 @@ function Header() {
                 <ul id="mobile-services-submenu" className="space-y-1 pl-5">
                   {serviceItems.map((item) => (
                     <li key={`mobile-service-${item.href}`} data-mobile-item>
+                      <Link
+                        href={item.href}
+                        className="font-hn-medium block rounded-xl px-3 py-2 uppercase text-sm text-white transition-colors hover:bg-zinc-800"
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            )}
+            <li data-mobile-item className="px-3 pt-2">
+              <button
+                type="button"
+                onClick={() => setMobileIndustriesOpen((prev) => !prev)}
+                aria-expanded={mobileIndustriesOpen}
+                aria-controls="mobile-industries-submenu"
+                className="flex w-full items-center justify-between rounded-xl py-2 text-left text-xs text-zinc-400 transition-colors hover:bg-zinc-800"
+              >
+                <span className="uppercase text-sm text-white font-hn-medium">
+                  Industries
+                </span>
+                <svg
+                  className={`h-4 w-4 transition-transform duration-200 ${
+                    mobileIndustriesOpen ? "rotate-180" : "rotate-0"
+                  }`}
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 8L10 13L15 8"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </li>
+            {mobileIndustriesOpen && (
+              <li>
+                <ul id="mobile-industries-submenu" className="space-y-1 pl-5">
+                  {industryItems.map((item) => (
+                    <li key={`mobile-industry-${item.href}`} data-mobile-item>
                       <Link
                         href={item.href}
                         className="font-hn-medium block rounded-xl px-3 py-2 uppercase text-sm text-white transition-colors hover:bg-zinc-800"
