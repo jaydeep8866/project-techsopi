@@ -21,7 +21,7 @@ const productItems = [
 export default function ProductsPage() {
   return (
     <main className="mx-auto w-full max-w-350 px-6 py-10">
-      <h1 className="text-3xl font-semibold">Products</h1>
+      {/* <h1 className="text-3xl font-semibold">Products</h1>
       <ul className="mt-6 grid gap-3 text-lg sm:grid-cols-2">
         {productItems.map((product) => (
           <li key={product.href}>
@@ -33,7 +33,7 @@ export default function ProductsPage() {
             </Link>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </main>
   );
 }

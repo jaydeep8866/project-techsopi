@@ -325,7 +325,7 @@ export default function TechnologiesPage() {
   return (
     <main className="w-full bg-black">
       {/* ── Section 1: Hero ── */}
-      <section className="relative overflow-hidden bg-[url('/images/service-bg-inner.webp')] bg-cover bg-center py-16 sm:py-24">
+      <section className="py-20 relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')] bg-cover bg-bottom  sm:py-20 xl:pb-48 xl:pt-80">
         <div className="relative mx-auto w-full max-w-350 px-4 text-center sm:px-6 lg:px-8">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white/80">
             <svg
@@ -344,7 +344,7 @@ export default function TechnologiesPage() {
             Technology Stack
           </span>
           <h1 className="mt-5 text-4xl font-semibold leading-tight text-white sm:text-6xl lg:text-7xl">
-            Our Technology <span className="text-[#89b7ff]">Stack</span>
+            Our Technology <span className="text-orange-500">Stack</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg">
             Cutting-edge technologies and proven frameworks to build scalable,

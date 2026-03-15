@@ -252,7 +252,7 @@ export default function IndustiesPage() {
             Industries We Serve
           </span>
           <h1 className="mt-4 text-4xl font-inter font-semibold leading-tight text-white sm:text-6xl">
-            Industries We <span className="text-[#89b7ff]">Serve</span>
+            Industries We <span className="text-orange-500">Serve</span>
           </h1>
           <p className="mx-auto mt-4 max-w-3xl text-base font-inter font-normal leading-relaxed text-white/80 sm:text-lg">
             Specialized IT solutions across diverse industries with deep
@@ -262,7 +262,7 @@ export default function IndustiesPage() {
         </div>
       </section>
 
-      <section className="bg-black relative overflow-hidden bg-[url('/images/service-sec-2-bg.png')] bg-cover bg-center py-14 sm:py-20">
+      <section className="bg-black relative overflow-hidden bg-[url('/images/service-sec-2-bg.png')] bg-cover bg-top py-14 sm:py-20">
         <div className="relative mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <span className="inline-flex items-center rounded-full border border-[#4a6cb2]/45 bg-[#214485]/18 px-4 py-1.5 text-xs font-inter font-medium text-[#8db5ff]">
@@ -282,7 +282,7 @@ export default function IndustiesPage() {
             {industries.map((industry) => (
               <article
                 key={industry.title}
-                className="overflow-hidden rounded-2xl border border-white/10 bg-[rgba(14,18,30,0.75)] shadow-[0_12px_28px_rgba(0,0,0,0.35)] backdrop-blur transition-all hover:border-[#5f86d8]/50 hover:bg-[rgba(20,26,42,0.92)]"
+                className="overflow-hidden rounded-2xl border border-white/15 bg-[rgba(18,17,17,0.5)]  hover:border-[#5f86d8]/50 hover:bg-[rgba(20,26,42,0.92)]"
               >
                 <div
                   className="relative h-48 bg-cover bg-center"
@@ -306,9 +306,9 @@ export default function IndustiesPage() {
                     {industry.points.map((point) => (
                       <li
                         key={point}
-                        className="flex items-start gap-2 text-sm font-inter font-medium text-[#a8c5ff]"
+                        className="flex items-start gap-2 text-sm font-inter font-medium text-[#fff]"
                       >
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#4b8bff]" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white/70" />
                         {point}
                       </li>
                     ))}

@@ -223,7 +223,7 @@ function Header() {
             <li className="group static">
               <Link
                 href="/services"
-                className="inline-flex items-center gap-1 rounded-md  px-0 py-2 transition-colors hover:bg-zinc-700 font-hn-medium"
+                className="inline-flex items-center gap-1 rounded-md  px-0 py-2 transition-colors "
               >
                 Services
                 <svg
@@ -268,7 +268,7 @@ function Header() {
             <li className="group static">
               <Link
                 href="/products"
-                className="inline-flex items-center gap-1 rounded-md px-0 py-2 transition-colors hover:bg-zinc-700 font-hn-medium"
+                className="inline-flex items-center gap-1 rounded-md px-0 py-2 transition-colors "
               >
                 Products
                 <svg
@@ -293,7 +293,7 @@ function Header() {
                     <li key={item.href}>
                       <Link
                         href={item.href}
-                        className="block h-full rounded-3xl border border-zinc-800 bg-zinc-950 px-6 py-5 transition-colors hover:border-zinc-600 font-hn-medium"
+                        className="block h-full rounded-3xl border border-zinc-800 bg-zinc-950 px-6 py-5 transition-colors  "
                       >
                         <div className="mb-3 flex items-start justify-between gap-4">
                           <h3 className="text-[22px] font-semibold normal-case tracking-normal text-zinc-100">
