@@ -68,7 +68,7 @@ export default function ProductsMainSection({
     <section className="relative overflow-hidden py-20 sm:py-28">
       <div className="relative mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <h1 className="text-3xl font-inter font-semibold leading-none text-white sm:text-4xl lg:text-[90px]">
+          <h1 className="text-3xl font-inter font-semibold leading-none text-white sm:text-4xl lg:text-6xl">
             Our Products
           </h1>
           <p className="mt-4 max-w-3xl text-sm font-inter font-normal text-white/60 sm:text-base">

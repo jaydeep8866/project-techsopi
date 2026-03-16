@@ -69,7 +69,7 @@ export default function ServiceMainSection({
       <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="mb-12">
-          <h1 className="text-5xl font-inter font-semibold leading-none text-white sm:text-7xl lg:text-[90px]">
+          <h1 className="text-5xl font-inter font-semibold leading-none text-white sm:text-7xl lg:text-6xl">
             Services
           </h1>
           <p className="mt-4 max-w-3xl text-sm font-inter font-normal text-white/60 sm:text-base">
