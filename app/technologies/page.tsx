@@ -343,7 +343,7 @@ export default function TechnologiesPage() {
             </svg>
             Technology Stack
           </span>
-          <h1 className="mt-5 text-4xl font-semibold leading-tight text-white sm:text-6xl lg:text-7xl">
+          <h1 className="mt-5 text-4xl font-semibold leading-tight text-white sm:text-6xl lg:text-6xl">
             Our Technology <span className="text-orange-500">Stack</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg">

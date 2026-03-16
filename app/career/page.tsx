@@ -122,7 +122,7 @@ export default function CareerPage() {
           <p className="text-xs  inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-inter font-medium text-white/80">
             CAREERS
           </p>
-          <h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-5xl">
+          <h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-6xl">
             Join Our <span className="text-orange-500">Team</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-xl my-5 text-white/50  mx-auto font-inter font-normal sm:text-lg">
