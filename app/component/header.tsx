@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
 import logo from "../../public/logo.png";
 
@@ -13,7 +14,7 @@ const navItems = [
   { label: "Industries", href: "/industies" },
   { label: "Technologies", href: "/technologies" },
   { label: "Career", href: "/career" },
-  { label: "Blog", href: "/blog" },
+  // { label: "Blog", href: "/blog" },
 ];
 
 const industryItems = [
@@ -92,12 +93,21 @@ const serviceItems = [
 ];
 
 function Header() {
+  const pathname = usePathname();
   const [searchOpen, setSearchOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
   const mobileMenuInnerRef = useRef<HTMLDivElement | null>(null);
+
+  const isActivePath = (href: string) => {
+    if (href === "/") {
+      return pathname === href;
+    }
+
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
 
   useEffect(() => {
     if (!menuOpen) {
@@ -214,7 +224,11 @@ function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="transition-colors hover:text-white/80 "
+                  className={`transition-colors ${
+                    isActivePath(item.href)
+                      ? "text-orange-500"
+                      : "hover:text-white/80"
+                  }`}
                 >
                   {item.label}
                 </Link>
@@ -223,7 +237,11 @@ function Header() {
             <li className="group static">
               <Link
                 href="/services"
-                className="inline-flex items-center gap-1 rounded-md  px-0 py-2 transition-colors "
+                className={`inline-flex items-center gap-1 rounded-md px-0 py-2 transition-colors ${
+                  isActivePath("/services")
+                    ? "text-orange-500"
+                    : "hover:text-white/80"
+                }`}
               >
                 Services
                 <svg
@@ -248,7 +266,9 @@ function Header() {
                     <li key={item.href}>
                       <Link
                         href={item.href}
-                        className="block h-full rounded-3xl border border-zinc-800 bg-zinc-950 px-6 py-5 transition-colors hover:border-zinc-600 font-hn-medium"
+                        className={`block h-full rounded-3xl border border-zinc-800 bg-zinc-950 px-6 py-5 transition-colors hover:border-zinc-600 font-hn-medium ${
+                          isActivePath(item.href) ? "text-orange-500" : ""
+                        }`}
                       >
                         <div className="mb-3 flex items-start justify-between gap-4">
                           <h3 className="text-[22px] font-semibold normal-case tracking-normal text-zinc-100">
@@ -268,7 +288,11 @@ function Header() {
             <li className="group static">
               <Link
                 href="/products"
-                className="inline-flex items-center gap-1 rounded-md px-0 py-2 transition-colors "
+                className={`inline-flex items-center gap-1 rounded-md px-0 py-2 transition-colors ${
+                  isActivePath("/products")
+                    ? "text-orange-500"
+                    : "hover:text-white/80"
+                }`}
               >
                 Products
                 <svg
@@ -293,7 +317,9 @@ function Header() {
                     <li key={item.href}>
                       <Link
                         href={item.href}
-                        className="block h-full rounded-3xl border border-zinc-800 bg-zinc-950 px-6 py-5 transition-colors  "
+                        className={`block h-full rounded-3xl border border-zinc-800 bg-zinc-950 px-6 py-5 transition-colors ${
+                          isActivePath(item.href) ? "text-orange-500" : ""
+                        }`}
                       >
                         <div className="mb-3 flex items-start justify-between gap-4">
                           <h3 className="text-[22px] font-semibold normal-case tracking-normal text-zinc-100">
@@ -314,7 +340,11 @@ function Header() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="transition-colors hover:text-white/80 font-inter font-medium"
+                  className={`transition-colors font-inter font-medium ${
+                    isActivePath(item.href)
+                      ? "text-orange-500"
+                      : "hover:text-white/80"
+                  }`}
                 >
                   {item.label}
                 </Link>
@@ -390,7 +420,9 @@ function Header() {
                 <li key={`mobile-${item.href}`} data-mobile-item>
                   <Link
                     href={item.href}
-                    className="block rounded-xl px-3 py-2 font-hn-medium transition-colors hover:bg-zinc-800"
+                    className={`block rounded-xl px-3 py-2 font-hn-medium transition-colors hover:bg-zinc-800 ${
+                      isActivePath(item.href) ? "text-orange-500" : ""
+                    }`}
                     onClick={() => setMenuOpen(false)}
                   >
                     {item.label}
@@ -403,9 +435,15 @@ function Header() {
                 onClick={() => setMobileServicesOpen((prev) => !prev)}
                 aria-expanded={mobileServicesOpen}
                 aria-controls="mobile-services-submenu"
-                className="flex w-full items-center justify-between rounded-xl py-2 text-left text-xs text-zinc-400 transition-colors hover:bg-zinc-800"
+                className={`flex w-full items-center justify-between rounded-xl py-2 text-left text-xs text-zinc-400 transition-colors hover:bg-zinc-800 ${
+                  isActivePath("/services") ? "text-orange-500" : ""
+                }`}
               >
-                <span className="uppercase text-sm text-white font-hn-medium">
+                <span
+                  className={`font-hn-medium text-sm uppercase ${
+                    isActivePath("/services") ? "text-orange-500" : "text-white"
+                  }`}
+                >
                   Services
                 </span>
                 <svg
@@ -434,7 +472,11 @@ function Header() {
                     <li key={`mobile-service-${item.href}`} data-mobile-item>
                       <Link
                         href={item.href}
-                        className="font-hn-medium block rounded-xl px-3 py-2 uppercase text-sm text-white transition-colors hover:bg-zinc-800"
+                        className={`font-hn-medium block rounded-xl px-3 py-2 text-sm uppercase transition-colors hover:bg-zinc-800 ${
+                          isActivePath(item.href)
+                            ? "text-orange-500"
+                            : "text-white"
+                        }`}
                         onClick={() => setMenuOpen(false)}
                       >
                         {item.label}
@@ -450,9 +492,15 @@ function Header() {
                 onClick={() => setMobileProductsOpen((prev) => !prev)}
                 aria-expanded={mobileProductsOpen}
                 aria-controls="mobile-products-submenu"
-                className="flex w-full items-center justify-between rounded-xl py-2 text-left text-xs text-zinc-400 transition-colors hover:bg-zinc-800"
+                className={`flex w-full items-center justify-between rounded-xl py-2 text-left text-xs text-zinc-400 transition-colors hover:bg-zinc-800 ${
+                  isActivePath("/products") ? "text-orange-500" : ""
+                }`}
               >
-                <span className="uppercase text-sm text-white font-hn-medium">
+                <span
+                  className={`font-hn-medium text-sm uppercase ${
+                    isActivePath("/products") ? "text-orange-500" : "text-white"
+                  }`}
+                >
                   Products
                 </span>
                 <svg
@@ -481,7 +529,11 @@ function Header() {
                     <li key={`mobile-product-${item.href}`} data-mobile-item>
                       <Link
                         href={item.href}
-                        className="font-hn-medium block rounded-xl px-3 py-2 uppercase text-sm text-white transition-colors hover:bg-zinc-800"
+                        className={`font-hn-medium block rounded-xl px-3 py-2 text-sm uppercase transition-colors hover:bg-zinc-800 ${
+                          isActivePath(item.href)
+                            ? "text-orange-500"
+                            : "text-white"
+                        }`}
                         onClick={() => setMenuOpen(false)}
                       >
                         {item.label}
