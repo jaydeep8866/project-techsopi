@@ -114,7 +114,7 @@ export default function CareerPage() {
 
   return (
     <main className="min-h-screen bg-[#080b14] text-white">
-      <section className="relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')] bg-cover bg-bottom py-24 sm:py-20 xl:pb-48 xl:pt-80">
+      <section className="relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')] bg-cover bg-bottom px-6 pb-20 pt-20 md:pb-48 md:pt-48 sm:px-10 lg:px-14">
         <div className="absolute -left-16 top-12 h-44 w-44 rounded-full " />
         <div className="absolute -right-10 bottom-4 h-52 w-52 rounded-full " />
 
@@ -125,7 +125,7 @@ export default function CareerPage() {
           <h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-5xl">
             Join Our <span className="text-orange-500">Team</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-base text-blue-100/90 sm:text-lg">
+          <p className="mx-auto mt-5 max-w-2xl text-xl my-5 text-white/50  mx-auto font-inter font-normal sm:text-lg">
             Build the future of technology with us. We are looking for
             passionate individuals to join our growing team.
           </p>
@@ -175,7 +175,7 @@ export default function CareerPage() {
                   <span>{job.type}</span>
                 </div>
 
-                <p className="line-clamp-4 text-sm leading-7 text-blue-100/85">
+                <p className="line-clamp-4 text-sm md:text-base leading-7 text-white/80">
                   {job.summary}
                 </p>
 

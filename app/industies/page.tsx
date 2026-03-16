@@ -246,7 +246,7 @@ export default function IndustiesPage() {
 
   return (
     <main className="w-full bg-[#03050b]">
-      <section className="py-20 relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')] bg-cover bg-bottom  sm:py-20 xl:pb-48 xl:pt-80">
+      <section className=" relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')] bg-cover bg-bottom  px-6 pb-20 pt-20 md:pb-48 md:pt-48 sm:px-10 lg:px-14">
         <div className="relative mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-inter font-medium text-white/80">
             Industries We Serve
@@ -262,10 +262,10 @@ export default function IndustiesPage() {
         </div>
       </section>
 
-      <section className="bg-black relative overflow-hidden bg-[url('/images/service-sec-2-bg.png')] bg-cover bg-top py-14 sm:py-20">
+      <section className="bg-black relative overflow-hidden bg-[url('/images/service-sec-2-bg.png')] bg-cover bg-top py-14 sm:pb-20">
         <div className="relative mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <span className="inline-flex items-center rounded-full border border-[#4a6cb2]/45 bg-[#214485]/18 px-4 py-1.5 text-xs font-inter font-medium text-[#8db5ff]">
+            <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-inter font-medium text-white/80">
               Our Industry Expertise
             </span>
             <h2 className="mt-4 text-3xl font-inter font-semibold leading-tight text-white sm:text-5xl">
@@ -298,7 +298,7 @@ export default function IndustiesPage() {
                   <h3 className="text-xl font-inter font-semibold text-white">
                     {industry.title}
                   </h3>
-                  <p className="mt-2 text-sm font-inter font-normal leading-relaxed text-white/65">
+                  <p className="mt-2 text-base font-inter font-normal leading-relaxed text-white/65">
                     {industry.description}
                   </p>
 

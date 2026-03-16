@@ -325,7 +325,7 @@ export default function TechnologiesPage() {
   return (
     <main className="w-full bg-black">
       {/* ── Section 1: Hero ── */}
-      <section className="py-20 relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')] bg-cover bg-bottom  sm:py-20 xl:pb-48 xl:pt-80">
+      <section className="relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')] bg-cover bg-bottom  px-6 pb-20 pt-20 md:pb-48 md:pt-48 sm:px-10 lg:px-14">
         <div className="relative mx-auto w-full max-w-350 px-4 text-center sm:px-6 lg:px-8">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white/80">
             <svg
@@ -357,7 +357,7 @@ export default function TechnologiesPage() {
       <section className="relative overflow-hidden bg-[url('/images/service-sec-2-bg.png')] bg-cover bg-center py-16 sm:py-24">
         <div className="relative mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <span className="inline-flex items-center rounded-full border border-[#4a6cb2]/50 bg-[#214485]/20 px-4 py-1.5 text-xs font-medium text-[#8db5ff]">
+            <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 text-white/80 px-4 py-1.5 text-xs font-medium">
               Technologies We Master
             </span>
             <h2 className="mt-4 text-3xl font-semibold text-white sm:text-5xl">
@@ -374,7 +374,7 @@ export default function TechnologiesPage() {
             {techCategories.map((cat) => (
               <div
                 key={cat.title}
-                className="rounded-3xl border border-white/10 bg-[rgba(14,18,30,0.70)] p-6 shadow-[0_8px_28px_rgba(0,0,0,0.30)] backdrop-blur md:p-8"
+                className="rounded-3xl border border-white/20 bg-white/10 text-white/80 p-6 shadow-[0_8px_28px_rgba(0,0,0,0.30)] backdrop-blur md:p-8"
               >
                 {/* Category header */}
                 <div className="mb-6 flex items-center gap-3">
@@ -452,10 +452,10 @@ export default function TechnologiesPage() {
                       {i + 1}
                     </span>
                     <div>
-                      <p className="text-base font-semibold text-white">
+                      <p className="text-lg font-semibold text-white">
                         {point.title}
                       </p>
-                      <p className="mt-1 text-sm leading-relaxed text-white/60">
+                      <p className="mt-1 text-base leading-relaxed text-white/60">
                         {point.desc}
                       </p>
                     </div>

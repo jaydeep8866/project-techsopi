@@ -24,7 +24,7 @@ export default function BlogPage() {
 
   return (
     <main className="min-h-screen bg-black text-white">
-      <section className="py-20 relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')] bg-cover bg-bottom  sm:py-20 xl:pb-48 xl:pt-80">
+      <section className=" relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')] bg-cover bg-bottom  px-6 pb-20 pt-20 md:pb-48 md:pt-48 sm:px-10 lg:px-14">
         <div className="absolute -left-10 top-8 h-44 w-44 rounded-full " />
         <div className="absolute right-0 top-0 h-56 w-56 rounded-full " />
 
@@ -36,7 +36,7 @@ export default function BlogPage() {
             Tech <span className="text-orange-500">Insights</span> and{" "}
             <span className="text-orange-500">Innovation</span>
           </h1>
-          <p className="mt-5 max-w-3xl text-base text-blue-100/90 sm:text-lg mx-auto">
+          <p className="mt-5 max-w-3xl text-xl my-5 text-white/50  mx-auto font-inter font-normal">
             Stay updated with the latest trends, insights, and best practices in
             technology, digital transformation, and software development from
             our expert team.
@@ -44,7 +44,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <section className=" px-6 py-20 sm:px-10 lg:px-14">
+      <section className=" px-6 pt-0 pb-40 sm:px-10 lg:px-14">
         <div className="mx-auto max-w-[1400px]">
           <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
             <h2 className="text-3xl font-semibold text-blue-50 sm:text-4xl">
@@ -77,7 +77,7 @@ export default function BlogPage() {
               <h3 className="text-2xl font-semibold text-blue-50 sm:text-3xl">
                 {featuredPost.title}
               </h3>
-              <p className="mt-4 text-sm leading-7 text-blue-100/85 sm:text-base">
+              <p className="mt-4 text-sm leading-7 text-white/70 sm:text-base">
                 {featuredPost.excerpt}
               </p>
 
@@ -144,7 +144,7 @@ export default function BlogPage() {
                     {post.title}
                   </h3>
 
-                  <p className="mt-3 line-clamp-4 text-sm leading-7 text-blue-100/80">
+                  <p className="mt-3 line-clamp-4 text-sm md:text-base leading-7 text-white/80">
                     {post.excerpt}
                   </p>
 
