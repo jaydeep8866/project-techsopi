@@ -321,28 +321,38 @@ const approachPoints = [
   },
 ];
 
+const getCapabilityTier = (pct: number) => {
+  if (pct >= 90) {
+    return "Core";
+  }
+  if (pct >= 80) {
+    return "Advanced";
+  }
+  if (pct >= 70) {
+    return "Strong";
+  }
+  return "Emerging";
+};
+
+const getTierClasses = (tier: string) => {
+  if (tier === "Core") {
+    return "border-emerald-300/40 bg-emerald-400/15 text-emerald-200";
+  }
+  if (tier === "Advanced") {
+    return "border-sky-300/40 bg-sky-400/15 text-sky-200";
+  }
+  if (tier === "Strong") {
+    return "border-amber-300/40 bg-amber-400/15 text-amber-200";
+  }
+  return "border-fuchsia-300/40 bg-fuchsia-400/15 text-fuchsia-200";
+};
+
 export default function TechnologiesPage() {
   return (
     <main className="w-full bg-black">
       {/* ── Section 1: Hero ── */}
-      <section className="relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')] bg-cover bg-bottom  px-6 pb-20 pt-20 md:pb-48 md:pt-48 sm:px-10 lg:px-14">
+      <section className="relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')]  bg-bottom  px-6 pb-20 pt-20 md:pb-48 md:pt-48 sm:px-10 lg:px-14">
         <div className="relative mx-auto w-full max-w-350 px-4 text-center sm:px-6 lg:px-8">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white/80">
-            <svg
-              width="13"
-              height="13"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M12 2a4 4 0 014 4v1h1a3 3 0 013 3v1a3 3 0 01-3 3h-1v1a4 4 0 01-8 0v-1H7a3 3 0 01-3-3v-1a3 3 0 013-3h1V6a4 4 0 014-4z"
-                stroke="currentColor"
-                strokeWidth="1.8"
-              />
-            </svg>
-            Technology Stack
-          </span>
           <h1 className="mt-5 text-4xl font-semibold leading-tight text-white sm:text-6xl lg:text-6xl">
             Our Technology <span className="text-orange-500">Stack</span>
           </h1>
@@ -354,13 +364,10 @@ export default function TechnologiesPage() {
       </section>
 
       {/* ── Section 2: Technology Categories ── */}
-      <section className="relative overflow-hidden bg-[url('/images/service-sec-2-bg.png')] bg-cover bg-center py-16 sm:py-24">
+      <section className="relative overflow-hidden bg-[url('/images/service-sec-2-bg.png')] bg-no-repeat bg-center py-16 sm:py-0">
         <div className="relative mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
-            <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 text-white/80 px-4 py-1.5 text-xs font-medium">
-              Technologies We Master
-            </span>
-            <h2 className="mt-4 text-3xl font-semibold text-white sm:text-5xl">
+            <h2 className="mt-0 text-3xl font-semibold text-white sm:text-5xl">
               Comprehensive Technology Expertise
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/60">
@@ -374,7 +381,7 @@ export default function TechnologiesPage() {
             {techCategories.map((cat) => (
               <div
                 key={cat.title}
-                className="rounded-3xl border border-white/20 bg-white/10 text-white/80 p-6 shadow-[0_8px_28px_rgba(0,0,0,0.30)] backdrop-blur md:p-8"
+                className="rounded-3xl border border-white/20 bg-white/10 p-6 text-white/80 shadow-[0_8px_28px_rgba(0,0,0,0.30)] backdrop-blur md:p-8"
               >
                 {/* Category header */}
                 <div className="mb-6 flex items-center gap-3">
@@ -391,25 +398,42 @@ export default function TechnologiesPage() {
 
                 {/* Tech items grid */}
                 <div className="grid grid-cols-1 gap-x-8 gap-y-5 sm:grid-cols-2 xl:grid-cols-3">
-                  {cat.items.map((item) => (
-                    <div key={item.name}>
-                      <div className="mb-1.5 flex items-center justify-between">
-                        <span className="text-sm font-semibold text-white">
-                          {item.name}
-                        </span>
-                        <span className="text-xs font-medium text-[#46a3db]">
-                          {item.pct}%
-                        </span>
-                      </div>
-                      <div className="h-1.5 w-full overflow-hidden rounded-full bg-white/10">
-                        <div
-                          className="h-full rounded-full bg-linear-to-r from-[#2f63da] to-[#46a3db]"
-                          style={{ width: `${item.pct}%` }}
-                        />
-                      </div>
-                      <p className="mt-1 text-xs text-white/45">{item.desc}</p>
-                    </div>
-                  ))}
+                  {cat.items.map((item) => {
+                    const tier = getCapabilityTier(item.pct);
+
+                    return (
+                      <article
+                        key={item.name}
+                        className="group rounded-2xl border border-white/10 bg-black/35 p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#46a3db]/50 hover:bg-[#46a3db]/8"
+                      >
+                        <div className="flex items-start justify-between gap-3">
+                          <h4 className="text-sm font-semibold text-white sm:text-base">
+                            {item.name}
+                          </h4>
+                          <span
+                            className={`inline-flex shrink-0 rounded-full border px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide ${getTierClasses(
+                              tier,
+                            )}`}
+                          >
+                            {tier}
+                          </span>
+                        </div>
+
+                        <p className="mt-2 text-xs leading-relaxed text-white/60 sm:text-sm">
+                          {item.desc}
+                        </p>
+
+                        <div className="mt-3 flex flex-wrap gap-2">
+                          <span className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] font-medium uppercase tracking-wide text-white/70">
+                            Production Ready
+                          </span>
+                          <span className="inline-flex items-center rounded-full border border-[#46a3db]/30 bg-[#46a3db]/10 px-2.5 py-1 text-[11px] font-medium uppercase tracking-wide text-[#8bc7ec]">
+                            {cat.title}
+                          </span>
+                        </div>
+                      </article>
+                    );
+                  })}
                 </div>
               </div>
             ))}

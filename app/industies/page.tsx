@@ -248,9 +248,6 @@ export default function IndustiesPage() {
     <main className="w-full bg-[#03050b]">
       <section className=" relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')] bg-cover bg-bottom  px-6 pb-20 pt-20 md:pb-48 md:pt-48 sm:px-10 lg:px-14">
         <div className="relative mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-inter font-medium text-white/80">
-            Industries We Serve
-          </span>
           <h1 className="mt-4 text-4xl font-inter font-semibold leading-tight text-white sm:text-6xl">
             Industries We <span className="text-orange-500">Serve</span>
           </h1>
@@ -262,12 +259,9 @@ export default function IndustiesPage() {
         </div>
       </section>
 
-      <section className="bg-black relative overflow-hidden bg-[url('/images/service-sec-2-bg.png')] bg-cover bg-top py-14 sm:pb-20">
+      <section className="bg-black relative overflow-hidden bg-[url('/images/service-sec-2-bg.png')]  no-repeat bg-top  sm:pb-20">
         <div className="relative mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-inter font-medium text-white/80">
-              Our Industry Expertise
-            </span>
             <h2 className="mt-4 text-3xl font-inter font-semibold leading-tight text-white sm:text-5xl">
               Deep Domain Knowledge
             </h2>

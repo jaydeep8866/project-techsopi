@@ -96,6 +96,10 @@ function Header() {
   const pathname = usePathname();
   const [searchOpen, setSearchOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isDesktopNavHovered, setIsDesktopNavHovered] = useState(false);
+  const [activeMegaMenu, setActiveMegaMenu] = useState<
+    "services" | "products" | null
+  >(null);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement | null>(null);
@@ -177,9 +181,20 @@ function Header() {
     }
   }, [menuOpen]);
 
+  useEffect(() => {
+    setActiveMegaMenu(null);
+    setIsDesktopNavHovered(false);
+  }, [pathname]);
+
   return (
     <header className="fixed z-50 font-inter w-full bg-transparent text-white md:pt-3">
-      <div className="relative mx-auto flex w-full max-w-350 items-center justify-between px-3.5 py-1 md:rounded-4xl border-1 border-zinc-800 bg-black/40 backdrop-blur-[2px]">
+      {(activeMegaMenu || isDesktopNavHovered) && (
+        <div
+          aria-hidden="true"
+          className="pointer-events-none fixed inset-0 z-40 bg-black/45 backdrop-blur-md"
+        />
+      )}
+      <div className="relative z-50 mx-auto flex w-full max-w-350 items-center justify-between px-3.5 py-1 md:rounded-4xl border-1 border-zinc-800 bg-black/40 backdrop-blur-[2px]">
         <div className="navbar7_logo flex items-center">
           <Link href="/" aria-label="home" className="inline-flex items-center">
             <Image
@@ -218,7 +233,24 @@ function Header() {
           </span>
         </button>
 
-        <nav aria-label="Main navigation" className="header-desktop-nav">
+        <nav
+          aria-label="Main navigation"
+          className="header-desktop-nav"
+          onMouseEnter={() => setIsDesktopNavHovered(true)}
+          onMouseLeave={() => {
+            setIsDesktopNavHovered(false);
+            setActiveMegaMenu(null);
+          }}
+          onFocusCapture={() => setIsDesktopNavHovered(true)}
+          onBlurCapture={(event) => {
+            if (
+              !event.currentTarget.contains(event.relatedTarget as Node | null)
+            ) {
+              setIsDesktopNavHovered(false);
+              setActiveMegaMenu(null);
+            }
+          }}
+        >
           <ul className="flex flex-wrap items-center justify-end gap-4 text-sm font-inter font-medium uppercase tracking-wide text-zinc-100">
             {navItems.slice(0, 2).map((item) => (
               <li key={item.href}>
@@ -234,7 +266,13 @@ function Header() {
                 </Link>
               </li>
             ))}
-            <li className="group static">
+            <li
+              className="group static"
+              onMouseEnter={() => setActiveMegaMenu("services")}
+              onMouseLeave={() => setActiveMegaMenu(null)}
+              onFocusCapture={() => setActiveMegaMenu("services")}
+              onBlurCapture={() => setActiveMegaMenu(null)}
+            >
               <Link
                 href="/services"
                 className={`inline-flex items-center gap-1 rounded-md px-0 py-2 transition-colors ${
@@ -245,7 +283,9 @@ function Header() {
               >
                 Services
                 <svg
-                  className="h-4 w-4 transition-transform group-hover:rotate-180"
+                  className={`h-4 w-4 transition-transform ${
+                    activeMegaMenu === "services" ? "rotate-180" : "rotate-0"
+                  }`}
                   viewBox="0 0 20 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -260,7 +300,13 @@ function Header() {
                   />
                 </svg>
               </Link>
-              <div className="invisible absolute left-0 top-[calc(100%+12px)] z-20 w-full rounded-3xl border border-zinc-800 bg-black/95 p-3 opacity-0 shadow-2xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
+              <div
+                className={`absolute left-0 top-[calc(100%+12px)] z-20 w-full rounded-3xl border border-zinc-800 bg-black/95 p-3 shadow-2xl transition-all duration-200 ${
+                  activeMegaMenu === "services"
+                    ? "visible opacity-100"
+                    : "invisible opacity-0"
+                }`}
+              >
                 <ul className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
                   {serviceItems.map((item) => (
                     <li key={item.href}>
@@ -285,7 +331,13 @@ function Header() {
                 </ul>
               </div>
             </li>
-            <li className="group static">
+            <li
+              className="group static"
+              onMouseEnter={() => setActiveMegaMenu("products")}
+              onMouseLeave={() => setActiveMegaMenu(null)}
+              onFocusCapture={() => setActiveMegaMenu("products")}
+              onBlurCapture={() => setActiveMegaMenu(null)}
+            >
               <Link
                 href="/products"
                 className={`inline-flex items-center gap-1 rounded-md px-0 py-2 transition-colors ${
@@ -296,7 +348,9 @@ function Header() {
               >
                 Products
                 <svg
-                  className="h-4 w-4 transition-transform group-hover:rotate-180"
+                  className={`h-4 w-4 transition-transform ${
+                    activeMegaMenu === "products" ? "rotate-180" : "rotate-0"
+                  }`}
                   viewBox="0 0 20 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -311,7 +365,13 @@ function Header() {
                   />
                 </svg>
               </Link>
-              <div className="invisible absolute left-0 top-[calc(100%+12px)] z-20 w-full rounded-3xl border border-zinc-800 bg-black/95 p-3 opacity-0 shadow-2xl transition-all duration-200 group-hover:visible group-hover:opacity-100">
+              <div
+                className={`absolute left-0 top-[calc(100%+12px)] z-20 w-full rounded-3xl border border-zinc-800 bg-black/95 p-3 shadow-2xl transition-all duration-200 ${
+                  activeMegaMenu === "products"
+                    ? "visible opacity-100"
+                    : "invisible opacity-0"
+                }`}
+              >
                 <ul className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
                   {industryItems.map((item) => (
                     <li key={item.href}>

@@ -119,9 +119,6 @@ export default function CareerPage() {
         <div className="absolute -right-10 bottom-4 h-52 w-52 rounded-full " />
 
         <div className="relative mx-auto max-w-5xl text-center px-4">
-          <p className="text-xs  inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-inter font-medium text-white/80">
-            CAREERS
-          </p>
           <h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-6xl">
             Join Our <span className="text-orange-500">Team</span>
           </h1>

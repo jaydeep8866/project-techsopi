@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ServiceMainSection from "@/app/component/services-main-section";
 
 const serviceItems = [
   {
@@ -14,20 +15,13 @@ const serviceItems = [
 
 export default function ServicesPage() {
   return (
-    <main className="mx-auto w-full max-w-350 px-6 py-10">
-      {/* <h1 className="text-3xl font-semibold">Services</h1>
-      <ul className="mt-6 space-y-3 text-lg">
-        {serviceItems.map((service) => (
-          <li key={service.href}>
-            <Link
-              href={service.href}
-              className="text-zinc-700 transition-colors hover:text-zinc-950"
-            >
-              {service.label}
-            </Link>
-          </li>
-        ))}
-      </ul> */}
+    <main className="mx-auto w-full max-w-full px-0 py-10 relative">
+      <div className="absolute top-0 right-0 pt-0 md:pt-20 w-full h-[600px] min-h-[700px] new-combine  bg-[url('/images/service-bg-inner.webp')]  bg-no-repeat   md:bg-right"></div>
+      <section className="service-main ">
+        <div>
+          <ServiceMainSection activeHref="/services/ai-machine-learning" />
+        </div>
+      </section>
     </main>
   );
 }

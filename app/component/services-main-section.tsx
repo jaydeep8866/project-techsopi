@@ -51,22 +51,27 @@ export default function ServiceMainSection({
 }: ServiceMainSectionProps) {
   const [openItems, setOpenItems] = useState<Set<string>>(() => {
     const initial = new Set<string>([serviceData[0].href, serviceData[1].href]);
-    if (activeHref) initial.add(activeHref);
+    if (activeHref) {
+      initial.add(activeHref);
+    }
     return initial;
   });
 
   const toggle = (href: string) => {
     setOpenItems((prev) => {
       const next = new Set(prev);
-      if (next.has(href)) next.delete(href);
-      else next.add(href);
+      if (next.has(href)) {
+        next.delete(href);
+      } else {
+        next.add(href);
+      }
       return next;
     });
   };
 
   return (
     <section className="relative overflow-hidden py-20 sm:py-28">
-      <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="mb-12">
           <h1 className="text-5xl font-inter font-semibold leading-none text-white sm:text-7xl lg:text-6xl">
@@ -104,7 +109,7 @@ export default function ServiceMainSection({
                   >
                     {service.label}
                   </span>
-                  <span className="ml-4 flex-shrink-0 text-white/50">
+                  <span className="ml-4 shrink-0 text-white/50">
                     {isOpen ? (
                       <svg
                         width="20"

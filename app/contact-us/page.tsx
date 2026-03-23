@@ -44,24 +44,21 @@ const serviceOptions = [
 export default function ContactUsPage() {
   return (
     <main className="min-h-screen bg-black text-white">
-      <section className="bg-[url('/images/service-bg-inner.webp')] bg-bottom relative overflow-hidden px-6 pb-20 pt-20 md:pb-48 md:pt-48 sm:px-10 lg:px-14">
+      <section className="bg-[url('/images/service-bg-inner.webp')] bg-bottom relative overflow-hidden px-6 pb-20 pt-20 md:pb-36 md:pt-48 sm:px-10 lg:px-14">
         <div className="absolute left-12 top-8 h-44 w-44 rounded-full " />
         <div className="absolute right-0 top-0 h-56 w-56 rounded-full" />
 
         <div className="relative mx-auto max-w-[1400px] text-center px-4">
-          <p className="text-xs  inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-inter font-medium text-white/80">
-            CONTACT
-          </p>
           <h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
             Get In <span className="text-orange-500">Touch</span>
           </h1>
-          <p className="mt-5 max-w-3xl text-base text-blue-100/90 sm:text-lg mx-auto">
+          <p className="mt-2 max-w-3xl text-base text-white/50 sm:text-lg mx-auto">
             Ready to start your next project? Contact us today for a free
             consultation and let us transform your ideas into reality.
           </p>
         </div>
       </section>
-      <div className="bg-black bg-[url('/images/service-sec-2-bg.png')]  bg-no-repeat bg-cover bg-top">
+      <div className="bg-black bg-[url('/images/service-sec-2-bg.png')]  bg-no-repeat  bg-top">
         <section className=" px-6 pb-20 md:pb-48 sm:px-10 lg:px-14">
           <div className="mx-auto grid max-w-350 gap-8 lg:grid-cols-[1.12fr_0.88fr]">
             <article className="rounded-3xl border border-white/15 border border-white/15 bg-[rgba(18,17,17,0.8)] p-6 shadow-[0_16px_50px_rgba(0,0,0,0.4)] sm:p-8">
