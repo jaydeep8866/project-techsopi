@@ -36,24 +36,6 @@ export default function MerchandisingPlatformPage() {
         <section className="product-main">
           <ProductsMainSection activeHref="/products/merchandising-platform" />
         </section>
-        <section className="relative overflow-hidden pt-16 sm:py-20">
-          <div className="relative mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8">
-            <div className="flex w-full flex-col items-center gap-0">
-              <p className="w-full text-center text-white/70 font-inter font-medium text-sm uppercase tracking-wide">
-                AI-Powered Solutions
-              </p>
-              <h2 className="mx-auto max-w-3xl text-center text-2xl md:text-4xl font-inter font-semibold leading-tight text-white sm:text-6xl">
-                Flagship AI Products
-              </h2>
-              <p className="text-center text-base my-5 text-white/70 max-w-3xl mx-auto font-inter font-normal">
-                Our most advanced AI-powered products featuring intelligent
-                bots, machine learning analytics, and automated decision-making
-                capabilities that have transformed businesses across various
-                industries.
-              </p>
-            </div>
-          </div>
-        </section>
       </div>
 
       <div className="bg-[url('/images/service-sec-2-bg.png')] bg-cover bg-center">

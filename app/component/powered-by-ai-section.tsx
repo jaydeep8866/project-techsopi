@@ -79,30 +79,6 @@ export default function PoweredByAiSection() {
         {/* Heading */}
         <div className="mb-14 flex flex-col items-center text-center">
           {/* Badge */}
-          <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-inter font-medium uppercase tracking-widest text-white/70">
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
-            >
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                strokeWidth="1.6"
-              />
-              <path
-                d="M12 8v4l3 3"
-                stroke="currentColor"
-                strokeWidth="1.6"
-                strokeLinecap="round"
-              />
-            </svg>
-            AI Technology
-          </span>
 
           <h2 className="max-w-3xl text-3xl font-inter font-semibold leading-tight text-white sm:text-5xl md:text-6xl">
             Powered by Advanced AI

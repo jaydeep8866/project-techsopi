@@ -31,18 +31,15 @@ const coreValues = [
 export default function AboutUsPage() {
   return (
     <main className="min-h-screen bg-black text-white">
-      <section className="py-20 relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')] bg-cover bg-bottom  sm:py-20 xl:pb-48 xl:pt-80">
+      <section className="py-20 relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')] bg-cover bg-bottom  sm:py-20 xl:pb-48 xl:pt-40">
         <div className="absolute -left-10 top-10 h-44 w-44 rounded-full bg-orange-500/15 blur-3xl" />
         <div className="absolute -right-4 top-2 h-52 w-52 rounded-full bg-blue-500/20 blur-3xl" />
 
         <div className="relative mx-auto max-w-350 text-center">
-          <p className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white/85">
-            About PriFab IT Solutions
-          </p>
-          <h1 className="mx-auto mt-5 max-w-4xl text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+          <h1 className="mx-auto mt-5 max-w-4xl text-4xl font-inter font-semibold leading-tight sm:text-5xl lg:text-6xl">
             Transforming Businesses Through Innovation
           </h1>
-          <p className="mx-auto mt-5 max-w-3xl text-base text-blue-100/90 sm:text-lg">
+          <p className="mx-auto mt-5 max-w-3xl text-base font-inter font-normal text-white-100/50 sm:text-lg">
             Forward-thinking IT solutions company with 20+ years of experience,
             helping businesses thrive in the digital age through innovative
             technology.
@@ -50,18 +47,15 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <div className="bg-[url('/images/service-sec-2-bg.png')] bg-cover bg-top ">
-        <section className="  px-6 py-14 sm:px-10 lg:px-14">
-          <div className=" mx-auto grid max-w-350 items-center gap-10 lg:grid-cols-[1fr_1fr]">
-            <article className="border border-white/15 bg-[rgba(18,17,17,0.5)] p-6 md:p-10 rounded-3xl">
-              <p className="inline-flex rounded-full border border-blue-400/35 bg-blue-500/10 px-4 py-1 text-xs font-medium text-blue-200">
-                Our Journey
-              </p>
-              <h2 className="mt-4 text-3xl font-semibold text-blue-50 sm:text-4xl">
+      <div className="">
+        <section className="px-6 py-10 sm:px-10 lg:px-14">
+          <div className="mx-auto grid max-w-350 items-center gap-10 lg:grid-cols-[1fr_1fr]">
+            <article className="">
+              <h2 className=" text-3xl font-inter font-semibold  text-blue-50 sm:text-4xl">
                 Our Story
               </h2>
 
-              <div className="mt-4 space-y-4 text-sm leading-7 text-white/70 sm:text-base">
+              <div className="mt-4 space-y-4 text-sm font-inter font-normal leading-7 text-white/70 sm:text-base">
                 <p>
                   Founded in 2010, PriFab IT Solutions emerged from a vision to
                   bridge the gap between cutting-edge technology and practical
@@ -87,7 +81,7 @@ export default function AboutUsPage() {
               <ul className="mt-6 grid gap-2 text-base text-white/70">
                 {storyHighlights.map((item) => (
                   <li key={item} className="flex items-center gap-2">
-                    <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#46a3db]/50  text-xs text-white">
+                    <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-orange-500/50  text-xs text-white">
                       +
                     </span>
                     <span>{item}</span>
@@ -98,7 +92,7 @@ export default function AboutUsPage() {
 
             <div className="overflow-hidden rounded-2xl border border-blue-600/25 bg-[#0a1329] shadow-[0_16px_45px_rgba(0,0,0,0.45)]">
               <img
-                src="/images/2.webp"
+                src="/images/about.webp"
                 alt="Team collaboration meeting"
                 className="h-full min-h-72 w-full object-cover"
               />
@@ -109,9 +103,9 @@ export default function AboutUsPage() {
         <section className=" px-6 py-14 sm:px-10 lg:px-14">
           <div className="mx-auto max-w-350">
             <div className="text-center ">
-              <p className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5  text-xs font-medium text-white/85">
+              {/* <p className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5  text-xs font-medium text-white/85">
                 Mission and Vision
-              </p>
+              </p> */}
               <h2 className="mt-4 text-3xl font-semibold text-blue-50 sm:text-4xl">
                 Our Purpose and Direction
               </h2>
@@ -124,7 +118,7 @@ export default function AboutUsPage() {
 
             <div className="mt-8 grid gap-5 md:grid-cols-2">
               <article className="rounded-2xl border border-white/15 bg-[rgba(18,17,17,0.5)] p-6 shadow-[0_12px_35px_rgba(0,0,0,0.35)]">
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/25 text-blue-200">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/20 text-orange-200">
                   M
                 </div>
                 <h3 className="mt-3 text-2xl font-semibold text-blue-50">
@@ -161,9 +155,9 @@ export default function AboutUsPage() {
       <section className=" px-6 py-14 sm:px-10 lg:px-14">
         <div className="mx-auto max-w-350">
           <div className="text-center">
-            <p className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white/85">
+            {/* <p className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white/85">
               Core Values
-            </p>
+            </p> */}
             <h2 className="mt-4 text-3xl font-semibold text-blue-50 sm:text-4xl">
               Our Core Values
             </h2>
@@ -180,13 +174,13 @@ export default function AboutUsPage() {
                 key={value.title}
                 className="rounded-2xl border border-white/15 bg-[rgba(18,17,17,0.5)] p-6 shadow-[0_12px_35px_rgba(0,0,0,0.35)] p-5 "
               >
-                <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-blue-500/25 text-sm font-semibold text-blue-200">
+                <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-orange-500/20 text-orange-200 text-sm font-semibold font-inter">
                   {value.title.charAt(0)}
                 </div>
-                <h3 className="mt-3 text-xl font-semibold text-blue-50">
+                <h3 className="mt-3 text-xl font-inter font-semibold text-blue-50">
                   {value.title}
                 </h3>
-                <p className="mt-2 text-base leading-relaxed text-white/70 font-inter font-normal">
+                <p className="mt-2 text-base font-inter leading-relaxed text-white/70 font-inter font-normal">
                   {value.description}
                 </p>
               </article>
@@ -197,9 +191,9 @@ export default function AboutUsPage() {
 
       <section className="relative overflow-hidden  px-6 py-16 sm:px-10 lg:px-14">
         <div className="mx-auto max-w-350 text-center">
-          <p className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-medium text-white/85">
+          {/* <p className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1 text-xs font-medium text-white/85">
             Global Presence
-          </p>
+          </p> */}
           <h2 className="mt-4 text-4xl font-semibold text-white sm:text-5xl">
             Local Expertise, Global Reach
           </h2>
@@ -211,7 +205,7 @@ export default function AboutUsPage() {
           </p>
 
           <div className="mt-8 grid gap-10 md:grid-cols-2 max-w-5xl mx-auto">
-            <article className="rounded-2xl border border-white/20 bg-white/10 p-10 text-left backdrop-blur-sm">
+            <article className="rounded-2xl border border-white/15 bg-[rgba(18,17,17,0.5)] p-10 text-left backdrop-blur-sm">
               <h3 className="text-xl font-semibold text-white">
                 Registered Office
               </h3>
@@ -221,7 +215,7 @@ export default function AboutUsPage() {
               </p>
             </article>
 
-            <article className="rounded-2xl border border-white/20 bg-white/10 p-10 text-left backdrop-blur-sm">
+            <article className="rounded-2xl border border-white/15 bg-[rgba(18,17,17,0.5)] p-10 text-left backdrop-blur-sm">
               <h3 className="text-xl font-semibold text-white">
                 Corporate Office
               </h3>

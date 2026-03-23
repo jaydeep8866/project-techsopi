@@ -87,28 +87,6 @@ export default function ItConsultingPage() {
         <section className="service-main">
           <ServiceMainSection activeHref="/services/it-consulting" />
         </section>
-
-        <section className="relative overflow-hidden  pt-16 sm:py-20">
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-[260px] " />
-
-          <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
-            <div className="flex w-full items-start justify-between gap-6 md:flex-row md:items-center">
-              <div className="flex w-full flex-col items-start gap-0">
-                <p className="w-full text-center text-white/70 font-inter font-medium text-sm uppercase tracking-wide">
-                  Core Services
-                </p>
-                <h2 className="mx-auto max-w-3xl text-2xl md:text-4xl font-inter font-semibold leading-tight text-white sm:text-6xl">
-                  Flagship Solutions
-                </h2>
-                <p className="text-center text-base my-5 text-white max-w-3xl mx-auto font-inter font-normal">
-                  Our flagship services that form the foundation of our IT
-                  solutions portfolio, designed to drive innovation and business
-                  success.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
       <div className="service-sec-2 bg-[url('/images/service-sec-2-bg.png')] bg-cover bg-center">
         <section className="software-development relative overflow-hidden py-16 sm:py-20">
