@@ -312,7 +312,7 @@ function Header() {
                     <li key={item.href}>
                       <Link
                         href={item.href}
-                        className={`block h-full rounded-3xl border border-zinc-800 bg-zinc-950 px-6 py-5 transition-colors hover:border-zinc-600 font-hn-medium ${
+                        className={`block h-full rounded-3xl border border-zinc-800 hover:bg-zinc-950 px-6 py-5 transition-colors hover:border-zinc-600 font-inter ${
                           isActivePath(item.href) ? "text-orange-500" : ""
                         }`}
                       >
@@ -377,7 +377,7 @@ function Header() {
                     <li key={item.href}>
                       <Link
                         href={item.href}
-                        className={`block h-full rounded-3xl border border-zinc-800 bg-zinc-950 px-6 py-5 transition-colors ${
+                        className={`block h-full rounded-3xl border border-zinc-800 hover:bg-zinc-950 hover:border-zinc-600 px-6 py-5 transition-colors ${
                           isActivePath(item.href) ? "text-orange-500" : ""
                         }`}
                       >
