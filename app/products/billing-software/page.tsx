@@ -2,7 +2,7 @@ import ProductsMainSection from "@/app/component/products-main-section";
 import PoweredByAiSection from "@/app/component/powered-by-ai-section";
 import Link from "next/link";
 import Image from "next/image";
-import billingImage from "../../../public/images/1.webp";
+import billingImage from "../../../public/images/software.webp";
 
 const keyFeatures = [
   "Invoice generation system",
@@ -19,43 +19,11 @@ export default function BillingSoftwarePage() {
           <ProductsMainSection activeHref="/products/billing-software" />
         </section>
       </div> */}
-      <div className="bg-[url('/images/service-sec-2-bg.png')] bg-cover bg-center pt-20 md:pt-32">
-        <section className="billing relative overflow-hidden py-16 sm:py-20">
-          <div className="relative mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8">
-            <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-8">
-              <div className="rounded-3xl  p-6 md:p-10 ">
-                <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-sky-400/35 bg-sky-400/15 text-sky-300">
-                  <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    aria-hidden="true"
-                  >
-                    <rect
-                      x="5"
-                      y="3"
-                      width="14"
-                      height="18"
-                      rx="2"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                    />
-                    <path
-                      d="M8 7h8M8 11h8M9.5 15h5"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M12 8.5v7"
-                      stroke="currentColor"
-                      strokeWidth="1.4"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </div>
-
+      <div className="bg-[url('/images/service-sec-2-bg.png')]  bg-top pt-0 md:pt-32">
+        <section className="billing relative overflow-hidden py-8 sm:py-10">
+          <div className="relative mx-auto w-full max-w-350 px-0 sm:px-6 lg:px-8">
+            <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-8">
+              <div className="rounded-3xl  p-6 md:p-0 ">
                 <h3 className="text-3xl font-inter font-semibold leading-tight text-white sm:text-5xl">
                   Billing Software
                 </h3>
@@ -63,12 +31,12 @@ export default function BillingSoftwarePage() {
                   Invoice &amp; Billing Management
                 </p>
 
-                <p className="mt-4 max-w-4xl text-base font-inter font-normal leading-relaxed text-white/70">
+                <p className="mt-4 max-w-4xl text-xl font-inter font-normal leading-relaxed text-white/70">
                   Professional billing and invoicing solution for businesses of
                   all sizes with compliance management.
                 </p>
 
-                <h4 className="mt-7 mb-4 text-2xl font-inter font-semibold text-white sm:text-3xl">
+                <h4 className="mt-6 mb-3 text-xl font-inter font-medium text-orange-500">
                   Key Features:
                 </h4>
                 <ul className="grid grid-cols-1 gap-y-3">
@@ -78,7 +46,7 @@ export default function BillingSoftwarePage() {
                       className="flex items-start gap-3 text-base font-inter font-normal text-white/70"
                     >
                       <svg
-                        className="mt-0.5 shrink-0 text-emerald-400"
+                        className="mt-0.5 shrink-0 text-orange-500"
                         width="18"
                         height="18"
                         viewBox="0 0 16 16"
@@ -108,13 +76,13 @@ export default function BillingSoftwarePage() {
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Link
                     href="/contact-us"
-                    className="inline-flex min-w-55 items-center justify-center rounded-xl bg-linear-to-r from-[#2f63da] to-[#8b2cd8] px-6 py-3 text-sm font-inter font-semibold text-white transition-opacity hover:opacity-90"
+                    className="inline-flex min-w-55 items-center justify-center rounded-3xl bg-white px-6 py-3 text-sm font-inter font-semibold text-black transition-opacity hover:opacity-90"
                   >
                     Learn More
                   </Link>
                   <Link
                     href="/contact-us"
-                    className="inline-flex min-w-55 items-center justify-center rounded-xl border border-[#3f79ff] px-6 py-3 text-sm font-inter font-semibold text-[#77a5ff] transition-colors hover:border-[#6a98ff] hover:text-[#a8c4ff]"
+                    className="inline-flex min-w-55 items-center justify-center rounded-full bg-orange-500 px-7 py-3 text-sm text-black transition hover:cursor-pointer hover:bg-orange-400 font-inter font-normal"
                   >
                     Get Quote
                   </Link>

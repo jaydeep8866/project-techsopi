@@ -21,8 +21,8 @@ const productItems = [
 
 export default function ProductsPage() {
   return (
-    <main className="mx-auto w-full max-w-350 px-6 py-10">
-      <div className="pt-0 md:pt-20 new-combine bg-black bg-[url('/images/service-bg-inner.webp')] bg-no-repeat bg-cover bg-bottom md:bg-right">
+    <main className="mx-auto w-full  px-0 md:pt-0 md:pb-20">
+      <div className="pt-0 md:pt-10 new-combine lg:h-[800px] lg:min-h-[700px] bg-black bg-[url('/images/service-bg-inner.webp')] bg-no-repeat bg-cover bg-bottom md:bg-right">
         <section className="product-main">
           <ProductsMainSection activeHref="/products/crm-platform" />
         </section>

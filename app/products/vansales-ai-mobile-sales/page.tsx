@@ -1,7 +1,7 @@
 import Image from "next/image";
-import ProductsMainSection from "@/app/component/products-main-section";
 import PoweredByAiSection from "@/app/component/powered-by-ai-section";
 import vansalesImage from "../../../public/images/2.webp";
+import Link from "next/link";
 
 const aiFeatures = [
   "Instant inventory queries via messaging bots",
@@ -31,52 +31,12 @@ const benefits = [
 
 export default function VanSalesAiMobileSalesPage() {
   return (
-    <main className="mx-auto w-full px-0 py-10">
-      <div className="pt-0 md:pt-20 new-combine bg-black bg-[url('/images/service-bg-inner.webp')] bg-no-repeat bg-cover bg-bottom md:bg-right">
-        <section className="product-main">
-          <ProductsMainSection activeHref="/products/vansales-ai-mobile-sales" />
-        </section>
-      </div>
-
-      <div className="bg-[url('/images/service-sec-2-bg.png')] bg-cover bg-center">
+    <main className="mx-auto w-full px-0 py-0">
+      <div className="bg-[url('/images/service-sec-2-bg.png')]  bg-top pt-0 md:pt-32">
         <section className="vansales relative overflow-hidden py-16 sm:py-20">
-          <div className="relative mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8">
+          <div className="relative mx-auto w-full max-w-350 px-0 sm:px-6 lg:px-8">
             <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-8">
-              {/* Left — detail card */}
-              <div className="border border-white/15 bg-[rgba(18,17,17,0.5)] p-6 md:p-10 rounded-3xl">
-                {/* Icon */}
-                <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-400/15 border border-orange-400/30">
-                  <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"
-                      stroke="#fb923c"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M3 6h18"
-                      stroke="#fb923c"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                    />
-                    <path
-                      d="M16 10a4 4 0 01-8 0"
-                      stroke="#fb923c"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-
-                {/* Title */}
+              <div className=" p-6 md:p-0 ">
                 <h3 className="text-3xl font-inter font-semibold leading-tight text-white sm:text-5xl">
                   VanSales AI
                 </h3>
@@ -84,44 +44,21 @@ export default function VanSalesAiMobileSalesPage() {
                   AI-Powered Mobile Sales Management
                 </p>
 
-                {/* Description */}
-                <p className="mt-4 text-base font-inter font-normal leading-relaxed text-white/70">
+                <p className="mt-4 text-base font-inter font-normal leading-relaxed text-white/70 md:text-xl">
                   Revolutionary mobile sales solution with integrated AI bots
                   for instant inventory queries, real-time tracking, and
                   intelligent sales analytics.
                 </p>
 
-                {/* AI Features box */}
-                <div className="mt-6 rounded-2xl border border-orange-400/20 bg-orange-400/5 p-5">
-                  <h4 className="flex items-center gap-2 text-base font-inter font-semibold text-orange-400 mb-3">
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      aria-hidden="true"
-                    >
-                      <circle
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="#fb923c"
-                        strokeWidth="1.8"
-                      />
-                      <path
-                        d="M12 8v4l3 3"
-                        stroke="#fb923c"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                      />
-                    </svg>
+                <div className="mt-6 ">
+                  <h4 className="flex items-center gap-2 text-xl font-inter font-medium text-orange-400 mb-3">
                     AI Features:
                   </h4>
                   <ul className="flex flex-col gap-2">
                     {aiFeatures.map((feat) => (
                       <li
                         key={feat}
-                        className="flex items-start gap-2 text-sm font-inter font-normal text-white/70"
+                        className="flex items-start gap-2 text-base font-inter font-normal text-white/70"
                       >
                         <svg
                           className="mt-0.5 shrink-0"
@@ -153,14 +90,14 @@ export default function VanSalesAiMobileSalesPage() {
                 </div>
 
                 {/* Key Features */}
-                <h4 className="mt-6 mb-3 text-lg font-inter font-semibold text-[#46a3db]">
+                <h4 className="mt-6 mb-3 text-xl font-inter font-medium text-orange-500">
                   Key Features:
                 </h4>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
                   {keyFeatures.map((feat) => (
                     <li
                       key={feat}
-                      className="flex items-start gap-2 text-sm font-inter font-normal text-white/70"
+                      className="flex items-start gap-2 text-base font-inter font-normal text-white/70"
                     >
                       <svg
                         className="mt-0.5 shrink-0"
@@ -174,12 +111,12 @@ export default function VanSalesAiMobileSalesPage() {
                           cx="8"
                           cy="8"
                           r="7"
-                          stroke="#46a3db"
+                          stroke="#fb923c"
                           strokeWidth="1.2"
                         />
                         <path
                           d="M5 8l2 2 4-4"
-                          stroke="#46a3db"
+                          stroke="#fb923c"
                           strokeWidth="1.4"
                           strokeLinecap="round"
                           strokeLinejoin="round"
@@ -191,14 +128,14 @@ export default function VanSalesAiMobileSalesPage() {
                 </ul>
 
                 {/* Benefits */}
-                <h4 className="mt-6 mb-3 text-lg font-inter font-semibold text-[#46a3db]">
+                <h4 className="mt-6 mb-3 text-xl font-inter font-medium text-orange-500">
                   Benefits:
                 </h4>
                 <ul className="flex flex-col gap-2">
                   {benefits.map((ben) => (
                     <li
                       key={ben}
-                      className="flex items-start gap-2 text-sm font-inter font-normal text-white/70"
+                      className="flex items-start gap-2 text-base font-inter font-normal text-white/70"
                     >
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-400" />
                       {ben}
@@ -208,18 +145,18 @@ export default function VanSalesAiMobileSalesPage() {
 
                 {/* CTA buttons */}
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <a
+                  <Link
                     href="/contact-us"
-                    className="inline-flex items-center rounded-full bg-orange-400 px-6 py-3 text-sm font-inter font-semibold text-black transition-colors hover:bg-orange-300"
+                    className="inline-flex min-w-55 items-center justify-center rounded-3xl bg-white px-6 py-3 text-sm font-inter font-semibold text-black transition-opacity hover:opacity-90"
                   >
-                    Request AI Demo
-                  </a>
-                  <a
+                    Learn More
+                  </Link>
+                  <Link
                     href="/contact-us"
-                    className="inline-flex items-center rounded-full border border-white/25 px-6 py-3 text-sm font-inter font-semibold text-white transition-colors hover:border-orange-400 hover:text-orange-400"
+                    className="inline-flex min-w-55 items-center justify-center rounded-full bg-orange-500 px-7 py-3 text-sm text-black transition hover:cursor-pointer hover:bg-orange-400 font-inter font-normal"
                   >
                     Get Quote
-                  </a>
+                  </Link>
                 </div>
               </div>
 

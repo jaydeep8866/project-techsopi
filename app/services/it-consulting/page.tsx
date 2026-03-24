@@ -88,11 +88,11 @@ export default function ItConsultingPage() {
           <ServiceMainSection activeHref="/services/it-consulting" />
         </section>
       </div> */}
-      <div className="service-sec-2 bg-[url('/images/service-sec-2-bg.png')]  bg-top pt-20 md:pt-24">
-        <section className="software-development relative overflow-hidden py-16 sm:py-10">
+      <div className="service-sec-2 bg-[url('/images/service-sec-2-bg.png')]  bg-top pt-00 md:pt-24">
+        <section className="software-development relative overflow-hidden py-10 sm:py-10">
           <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-8 ">
-              <div className="max-w-2xl  p-4 md:py-8 md:px-0 ">
+              <div className="max-w-2xl px-0 p-4 md:py-8 md:px-0 ">
                 <h3 className="text-3xl font-semibold leading-[1.05] text-white sm:text-5xl md:text-5xl">
                   IT Consulting
                 </h3>

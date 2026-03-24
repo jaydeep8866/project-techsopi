@@ -2,7 +2,7 @@ import ProductsMainSection from "@/app/component/products-main-section";
 import PoweredByAiSection from "@/app/component/powered-by-ai-section";
 import Link from "next/link";
 import Image from "next/image";
-import hrmsImage from "../../../public/images/4.webp";
+import hrmsImage from "../../../public/images/software.webp";
 
 const aiBotFeatures = [
   "Instant admission inquiry responses",
@@ -25,42 +25,11 @@ export default function CrmPlatformPage() {
           <ProductsMainSection activeHref="/products/crm-platform" />
         </section>
       </div> */}
-      <div className=" pt-20 md:pt-32">
-        <section className="admin relative overflow-hidden py-16 sm:py-20">
+      <div className="bg-[url('/images/service-sec-2-bg.png')]  bg-top pt-0 md:pt-32">
+        <section className="admin relative overflow-hidden py-12 sm:py-10">
           <div className="relative mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8">
-            <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-8">
-              <div className=" p-6 md:p-10 ">
-                <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-emerald-400/35 bg-emerald-400/15 text-emerald-300">
-                  <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <circle
-                      cx="8.5"
-                      cy="7"
-                      r="3"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                    />
-                    <path
-                      d="M20 8v6M23 11h-6"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </div>
-
+            <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-8">
+              <div className="p-0  md:p-0 ">
                 <h3 className="text-3xl font-inter font-semibold leading-tight text-white sm:text-5xl">
                   Smart Admission &amp; Fees Management
                 </h3>
@@ -68,38 +37,14 @@ export default function CrmPlatformPage() {
                   AI-Enhanced Educational Institution Management
                 </p>
 
-                <p className="mt-4 max-w-4xl text-base font-inter font-normal leading-relaxed text-white/70">
+                <p className="mt-4 max-w-4xl text-base md:text-xl font-inter font-normal leading-relaxed text-white/70">
                   Comprehensive solution for educational institutions with AI
                   bots for student support, automated fee management, and
                   intelligent query handling.
                 </p>
 
                 <div className="mt-6 ">
-                  <h4 className="mb-3 flex items-center gap-2 text-2xl font-inter font-semibold text-white sm:text-3xl">
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      aria-hidden="true"
-                      className="text-orange-500"
-                    >
-                      <path
-                        d="M7 10h10M7 14h6"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                      />
-                      <rect
-                        x="3"
-                        y="5"
-                        width="18"
-                        height="14"
-                        rx="3"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                      />
-                    </svg>
+                  <h4 className="mt-6 mb-3 text-xl font-inter font-medium text-orange-500">
                     AI Bot Features:
                   </h4>
                   <ul className="grid grid-cols-1 gap-y-3">
@@ -138,7 +83,7 @@ export default function CrmPlatformPage() {
                   </ul>
                 </div>
 
-                <h4 className="mt-7 mb-4 text-2xl font-inter font-semibold text-white sm:text-3xl">
+                <h4 className="mt-6 mb-3 text-xl font-inter font-medium text-orange-500">
                   Key Features:
                 </h4>
                 <ul className="grid grid-cols-1 gap-y-3">
@@ -148,7 +93,7 @@ export default function CrmPlatformPage() {
                       className="flex items-start gap-3 text-base font-inter font-normal text-white/70"
                     >
                       <svg
-                        className="mt-0.5 shrink-0 text-emerald-400"
+                        className="mt-0.5 shrink-0 text-orange-500"
                         width="18"
                         height="18"
                         viewBox="0 0 16 16"
@@ -178,13 +123,13 @@ export default function CrmPlatformPage() {
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Link
                     href="/contact-us"
-                    className="inline-flex min-w-55 items-center justify-center rounded-xl bg-linear-to-r from-[#2f63da] to-[#8b2cd8] px-6 py-3 text-sm font-inter font-semibold text-white transition-opacity hover:opacity-90"
+                    className="inline-flex min-w-55 items-center justify-center rounded-3xl bg-white px-6 py-3 text-sm font-inter font-semibold text-black transition-opacity hover:opacity-90"
                   >
                     Learn More
                   </Link>
                   <Link
                     href="/contact-us"
-                    className="inline-flex min-w-55 items-center justify-center rounded-xl border border-[#3f79ff] px-6 py-3 text-sm font-inter font-semibold text-[#77a5ff] transition-colors hover:border-[#6a98ff] hover:text-[#a8c4ff]"
+                    className="inline-flex min-w-55 items-center justify-center rounded-full bg-orange-500 px-7 py-3 text-sm text-black transition hover:cursor-pointer hover:bg-orange-400 font-inter font-normal"
                   >
                     Get Quote
                   </Link>
