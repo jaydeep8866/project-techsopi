@@ -75,27 +75,27 @@ const processSteps = [
 export default function AiMachineLearningPage() {
   return (
     <main className="mx-auto w-full  px-0 py-10">
-      <div className="pt-0 md:pt-20 new-combine bg-black bg-[url('/images/service-bg-inner.webp')]  bg-no-repeat bg-cover bg-bottom md:bg-right">
-        <section className="service-main">
-          <ServiceMainSection activeHref="/services/ai-machine-learning" />
-        </section>
-      </div>
-      <div className="service-sec-2 bg-[url('/images/service-sec-2-bg.png')] bg-cover bg-center">
-        <section className="software-development relative overflow-hidden py-16 sm:py-20">
+      {/* <div className="pt-0 md:pt-20 new-combine bg-black bg-[url('/images/service-bg-inner.webp')]  bg-no-repeat bg-cover bg-bottom md:bg-right">
+          <section className="service-main">
+            <ServiceMainSection activeHref="/services/ai-machine-learning" />
+          </section>
+        </div> */}
+      <div className="service-sec-2 bg-[url('/images/service-sec-2-bg.png')]  bg-top pt-20 md:pt-24">
+        <section className="software-development relative overflow-hidden py-16 sm:py-10">
           <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
             <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-8 ">
-              <div className="max-w-2xl border border-white/15 bg-[rgba(18,17,17,0.5)] p-4 md:p-8 rounded-3xl">
+              <div className="max-w-2xl p-4 md:py-8 md:px-0 rounded-3xl">
                 <h3 className="text-3xl font-semibold leading-[1.05] text-white sm:text-5xl md:text-5xl">
                   AI & Machine Learning
                 </h3>
 
-                <p className="mt-7 max-w-xl text-base leading-relaxed text-white/70 sm:text-2xl">
+                <p className="mt-3 max-w-xl text-base leading-relaxed text-white/70 sm:text-xl">
                   Cutting-edge artificial intelligence and machine learning
                   solutions to unlock data insights and automate intelligent
                   processes.
                 </p>
 
-                <h3 className="mt-5 text-xl mb-3 text-[#46a3db] font-inter font-medium">
+                <h3 className="mt-5 text-xl mb-3 text-orange-500 font-inter font-medium">
                   Key Features:
                 </h3>
                 <ul className="font-inter font-normal flex flex-col gap-3 list-disc list-inside text-base leading-relaxed text-white/70 sm:text-lg mb-3">
@@ -106,7 +106,7 @@ export default function AiMachineLearningPage() {
                   <li>AI-Powered Automation</li>
                   <li>Deep Learning Applications</li>
                 </ul>
-                <h3 className="mt-5 text-xl mb-3 text-[#46a3db] font-inter font-medium">
+                <h3 className="mt-5 text-xl mb-3 text-orange-500 font-inter font-medium">
                   Technologies:
                 </h3>
                 <ul className="flex flex-wrap gap-3 mt-2 text-base">

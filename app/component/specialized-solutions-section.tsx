@@ -57,9 +57,6 @@ export default function SpecializedSolutionsSection({
     <section className={sectionClassName}>
       <div className="relative mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="inline-flex items-center rounded-full border border-[#46a3db]/35 bg-[#46a3db]/15 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-[#7ac8f3]">
-            Additional Services
-          </p>
           <h2 className="mt-5 text-4xl font-semibold leading-tight text-white sm:text-6xl">
             Specialized <span className="text-orange-500">Solutions</span>
           </h2>

@@ -14,10 +14,10 @@ const keyFeatures = [
 export default function HrmsSolutionPage() {
   return (
     <main className="mx-auto w-full px-0 py-10">
-      <div className="pt-0 md:pt-20 new-combine bg-black bg-[url('/images/service-bg-inner.webp')] bg-no-repeat bg-cover bg-bottom md:bg-right">
-        <section className="product-main">
+      <div className="pt-0 md:pt-20  new-combine bg-black bg-[url('/images/service-bg-inner.webp')] bg-no-repeat bg-cover bg-bottom md:bg-right">
+        {/* <section className="product-main">
           <ProductsMainSection activeHref="/products/hrms-solution" />
-        </section>
+        </section> */}
         <section className="relative overflow-hidden pt-16 sm:py-20">
           <div className="relative mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8">
             <div className="flex w-full flex-col items-center gap-0">
@@ -35,11 +35,11 @@ export default function HrmsSolutionPage() {
           </div>
         </section>
       </div>
-      <div className="bg-[url('/images/service-sec-2-bg.png')] bg-cover bg-center">
+      <div className="">
         <section className="hrms relative overflow-hidden py-16 sm:py-20">
           <div className="relative mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8">
             <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-8">
-              <div className="rounded-3xl border border-white/15 bg-[rgba(18,17,17,0.5)] p-6 md:p-10 shadow-[0_8px_28px_rgba(0,0,0,0.22)]">
+              <div className="p-2 md:p-0">
                 <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-emerald-400/35 bg-emerald-400/15 text-emerald-300">
                   <svg
                     width="28"

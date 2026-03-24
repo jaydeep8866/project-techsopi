@@ -16,7 +16,7 @@ const serviceItems = [
 export default function ServicesPage() {
   return (
     <main className="mx-auto w-full max-w-full px-0 py-10 relative">
-      <div className="absolute top-0 right-0 pt-0 md:pt-20 w-full h-[600px] min-h-[700px] new-combine  bg-[url('/images/service-bg-inner.webp')]  bg-no-repeat   md:bg-right"></div>
+      <div className="absolute top-0 right-0 pt-0 md:pt-20 w-full h-[800px] min-h-[700px] new-combine  bg-[url('/images/service-bg-inner.webp')]  bg-no-repeat   md:bg-right"></div>
       <section className="service-main ">
         <div>
           <ServiceMainSection activeHref="/services/ai-machine-learning" />

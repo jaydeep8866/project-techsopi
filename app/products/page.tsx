@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ProductsMainSection from "@/app/component/products-main-section";
 
 const productItems = [
   {
@@ -21,19 +22,11 @@ const productItems = [
 export default function ProductsPage() {
   return (
     <main className="mx-auto w-full max-w-350 px-6 py-10">
-      {/* <h1 className="text-3xl font-semibold">Products</h1>
-      <ul className="mt-6 grid gap-3 text-lg sm:grid-cols-2">
-        {productItems.map((product) => (
-          <li key={product.href}>
-            <Link
-              href={product.href}
-              className="block rounded-xl border border-zinc-200 px-4 py-3 text-zinc-700 transition-colors hover:border-zinc-950 hover:text-zinc-950"
-            >
-              {product.label}
-            </Link>
-          </li>
-        ))}
-      </ul> */}
+      <div className="pt-0 md:pt-20 new-combine bg-black bg-[url('/images/service-bg-inner.webp')] bg-no-repeat bg-cover bg-bottom md:bg-right">
+        <section className="product-main">
+          <ProductsMainSection activeHref="/products/crm-platform" />
+        </section>
+      </div>
     </main>
   );
 }

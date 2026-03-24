@@ -20,16 +20,16 @@ const keyFeatures = [
 export default function CrmPlatformPage() {
   return (
     <main className="mx-auto w-full px-0 py-10">
-      <div className="pt-0 md:pt-20 new-combine bg-black bg-[url('/images/service-bg-inner.webp')] bg-no-repeat bg-cover bg-bottom md:bg-right">
+      {/* <div className="pt-0 md:pt-20 new-combine bg-black bg-[url('/images/service-bg-inner.webp')] bg-no-repeat bg-cover bg-bottom md:bg-right">
         <section className="product-main">
           <ProductsMainSection activeHref="/products/crm-platform" />
         </section>
-      </div>
-      <div className="bg-[url('/images/service-sec-2-bg.png')] bg-cover bg-center">
+      </div> */}
+      <div className=" pt-20 md:pt-32">
         <section className="admin relative overflow-hidden py-16 sm:py-20">
           <div className="relative mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8">
             <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-8">
-              <div className="rounded-3xl border border-white/15 bg-[rgba(18,17,17,0.5)] p-6 md:p-10 shadow-[0_8px_28px_rgba(0,0,0,0.22)]">
+              <div className=" p-6 md:p-10 ">
                 <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-emerald-400/35 bg-emerald-400/15 text-emerald-300">
                   <svg
                     width="28"
@@ -74,7 +74,7 @@ export default function CrmPlatformPage() {
                   intelligent query handling.
                 </p>
 
-                <div className="mt-6 rounded-2xl border border-purple-400/30 bg-purple-400/8 p-5">
+                <div className="mt-6 ">
                   <h4 className="mb-3 flex items-center gap-2 text-2xl font-inter font-semibold text-white sm:text-3xl">
                     <svg
                       width="18"
@@ -82,7 +82,7 @@ export default function CrmPlatformPage() {
                       viewBox="0 0 24 24"
                       fill="none"
                       aria-hidden="true"
-                      className="text-purple-300"
+                      className="text-orange-500"
                     >
                       <path
                         d="M7 10h10M7 14h6"
@@ -109,7 +109,7 @@ export default function CrmPlatformPage() {
                         className="flex items-start gap-3 text-base font-inter font-normal text-white/70"
                       >
                         <svg
-                          className="mt-0.5 shrink-0 text-purple-300"
+                          className="mt-0.5 shrink-0 text-orange-500"
                           width="18"
                           height="18"
                           viewBox="0 0 16 16"
