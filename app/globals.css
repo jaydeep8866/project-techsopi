@@ -103,7 +103,11 @@ select {
 .header-mobile-panel {
   display: block;
 }
-
+.gradient-text {
+  background: -webkit-linear-gradient(#E79241, #C55F2A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 
 @media (min-width: 1200px) {

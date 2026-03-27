@@ -343,7 +343,7 @@ export default function Home() {
             <div className=" sm:p-8 pb-0">
               <div className="flex items-center justify-between gap-8 flex-col lg:flex-row">
                 <div className="text-white w-full lg:w-1/2">
-                  <h1 className="text-4xl leading-tight sm:text-5xl font-inter font-bold  bg-[-webkit-linear-gradient(#E79241,_#C55F2A)]">
+                  <h1 className="text-4xl leading-tight sm:text-5xl font-inter font-bold gradient-text">
                     {slides[activeSlide].title}
                   </h1>
                   <p className="mt-4 max-w-xl text-xl leading-snug text-white/90 sm:text-2xl font-inter font-normal">
