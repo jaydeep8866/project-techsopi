@@ -351,10 +351,10 @@ export default function TechnologiesPage() {
   return (
     <main className="w-full bg-black">
       {/* ── Section 1: Hero ── */}
-      <section className="relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')]  bg-bottom  px-6 pb-20 pt-20 md:pb-48 md:pt-48 sm:px-10 lg:px-14">
+      <section className="relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')]  bg-bottom  px-6 pb-20 pt-20 md:pb-64 md:pt-64 sm:px-10 lg:px-14">
         <div className="relative mx-auto w-full max-w-350 px-4 text-center sm:px-6 lg:px-8">
           <h1 className="mt-5 text-4xl font-semibold leading-tight text-white sm:text-6xl lg:text-6xl">
-            Our Technology <span className="text-orange-500">Stack</span>
+            Our Technology <span className="gradient-text">Stack</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg">
             Cutting-edge technologies and proven frameworks to build scalable,

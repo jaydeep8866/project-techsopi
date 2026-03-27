@@ -22,24 +22,6 @@ const serviceData = [
     description:
       "Harness the power of AI and generative intelligence to automate workflows, unlock predictive insights, and deliver intelligent applications.",
   },
-  {
-    label: "Staff Augmentation",
-    href: "/services/staff-augmentation",
-    description:
-      "Scale your engineering team on demand with vetted professionals who integrate seamlessly into your existing workflows and culture.",
-  },
-  {
-    label: "IT Consulting",
-    href: "/services/it-consulting",
-    description:
-      "Strategic technology advisory to align your IT investments with business goals, optimize architecture, and accelerate delivery outcomes.",
-  },
-  {
-    label: "Digital Marketing",
-    href: "/services/digital-marketing",
-    description:
-      "Accelerate reach and engagement with data-driven campaigns, SEO expertise, and performance marketing that deliver measurable growth.",
-  },
 ];
 
 type ServiceMainSectionProps = {

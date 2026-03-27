@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { gsap } from "gsap";
 import logo from "../../public/logo.png";
 
@@ -94,7 +94,7 @@ const serviceItems = [
 
 function Header() {
   const pathname = usePathname();
-  const [searchOpen, setSearchOpen] = useState(false);
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [isDesktopNavHovered, setIsDesktopNavHovered] = useState(false);
   const [activeMegaMenu, setActiveMegaMenu] = useState<
@@ -414,7 +414,7 @@ function Header() {
               <button
                 type="button"
                 aria-label="Search"
-                onClick={() => setSearchOpen((prev) => !prev)}
+                onClick={() => router.push("/search")}
                 className="inline-flex items-center gap-2 transition-colors hover:text-white/80 uppercase tracking-wide font-normal"
               >
                 <svg
@@ -440,19 +440,6 @@ function Header() {
                 </svg>
                 <span className="font-hn-light">Search</span>
               </button>
-              {searchOpen && (
-                <form
-                  onSubmit={(event) => event.preventDefault()}
-                  className="absolute right-0 top-[calc(100%+10px)]"
-                >
-                  <input
-                    type="text"
-                    placeholder="Search"
-                    aria-label="Search input"
-                    className="w-56 rounded-full border border-zinc-700 bg-zinc-950 px-4 py-2 text-sm normal-case tracking-normal text-zinc-100 outline-none placeholder:text-zinc-500"
-                  />
-                </form>
-              )}
             </li>
             <li>
               <Link

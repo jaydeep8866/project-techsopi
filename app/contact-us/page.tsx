@@ -16,14 +16,14 @@ const offices: Office[] = [
     address:
       "G-01, Freedom Fighter Nagar, Near Water Tank, Nanded, Maharashtra - 431603",
     phone: "+91 78800 97779",
-    email: "info@prifabit.com",
+    email: "hr@techsopi.com",
   },
   {
     name: "Corporate Office",
     address:
       "Office No : 202-B, Radhika Premier, Mahalaxmi Nagar Main Road, Indore 452010",
     phone: "+91 731 4995680",
-    email: "info@prifabit.com",
+    email: "hr@techsopi.com",
   },
   {
     name: "Dubai Office",
@@ -96,7 +96,7 @@ export default function ContactUsPage() {
         "service_8dzpmvl", // Your service ID
         "template_ulv3vdr", // Your template ID
         {
-          to_email: "jaydeepkevadiya20@gmail.com",
+          to_email: "hr@techsopi.com",
           from_email: formData.email,
           from_name: formData.fullName,
           full_name: formData.fullName,
@@ -132,13 +132,13 @@ export default function ContactUsPage() {
 
   return (
     <main className="min-h-screen bg-black text-white">
-      <section className="bg-[url('/images/service-bg-inner.webp')] bg-bottom relative overflow-hidden px-6 pb-20 pt-20 md:pb-36 md:pt-48 sm:px-10 lg:px-14">
+      <section className="bg-[url('/images/service-bg-inner.webp')] bg-bottom relative overflow-hidden px-6 pb-20 pt-20 md:pb-64 md:pt-64 sm:px-10 lg:px-14">
         <div className="absolute left-12 top-8 h-44 w-44 rounded-full " />
         <div className="absolute right-0 top-0 h-56 w-56 rounded-full" />
 
         <div className="relative mx-auto max-w-[1400px] text-center px-4">
           <h1 className="mt-4 text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-            Get In <span className="text-orange-500">Touch</span>
+            Get In <span className="gradient-text">Touch</span>
           </h1>
           <p className="mt-2 max-w-3xl text-base text-white/50 sm:text-lg mx-auto">
             Ready to start your next project? Contact us today for a free
@@ -149,7 +149,7 @@ export default function ContactUsPage() {
       <div className="bg-black bg-[url('/images/service-sec-2-bg.png')]  bg-no-repeat  bg-top">
         <section className=" px-6 pb-20 md:pb-48 sm:px-10 lg:px-14">
           <div className="mx-auto grid max-w-350 gap-8 lg:grid-cols-[1.12fr_0.88fr]">
-            <article className="rounded-3xl border border-white/15 border border-white/15 bg-[rgba(18,17,17,0.8)] p-6 shadow-[0_16px_50px_rgba(0,0,0,0.4)] sm:p-8">
+            <article className="rounded-3xl border border-white/15 bg-[rgba(18,17,17,0.8)] p-6 shadow-[0_16px_50px_rgba(0,0,0,0.4)] sm:p-8">
               <h2 className="text-3xl font-semibold text-blue-50 sm:text-4xl">
                 Let&apos;s Start a Conversation
               </h2>
@@ -175,7 +175,7 @@ export default function ContactUsPage() {
                   </div>
                 )}
 
-                <label className="flex flex-col gap-2 text-sm text-blue-100/85">
+                <label className="flex flex-col gap-2 text-sm text-gray-100/85">
                   Full Name *
                   <input
                     type="text"
@@ -184,11 +184,11 @@ export default function ContactUsPage() {
                     onChange={handleChange}
                     placeholder="Enter your full name"
                     required
-                    className="rounded-xl border border-blue-600/35 bg-black/50 !important px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-blue-200/35 focus:border-orange-400/60"
+                    className="rounded-xl border border-gray-600/35 bg-black/50 !important px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-blue-200/35 focus:border-orange-400/60"
                   />
                 </label>
 
-                <label className="flex flex-col gap-2 text-sm text-blue-100/85">
+                <label className="flex flex-col gap-2 text-sm text-gray-100/85">
                   Email Address *
                   <input
                     type="email"
@@ -197,11 +197,11 @@ export default function ContactUsPage() {
                     onChange={handleChange}
                     placeholder="Enter your email"
                     required
-                    className="rounded-xl border border-blue-600/35 bg-black/50 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-blue-200/35 focus:border-orange-400/60"
+                    className="rounded-xl border border-gray-600/35 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-blue-200/35 focus:border-orange-400/60"
                   />
                 </label>
 
-                <label className="flex flex-col gap-2 text-sm text-blue-100/85">
+                <label className="flex flex-col gap-2 text-sm text-gray-100/85">
                   Company
                   <input
                     type="text"
@@ -209,11 +209,11 @@ export default function ContactUsPage() {
                     value={formData.company}
                     onChange={handleChange}
                     placeholder="Company name"
-                    className="rounded-xl border border-blue-600/35 bg-black/50 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-blue-200/35 focus:border-orange-400/60"
+                    className="rounded-xl border border-gray-600/35 bg-black/50 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-blue-200/35 focus:border-orange-400/60"
                   />
                 </label>
 
-                <label className="flex flex-col gap-2 text-sm text-blue-100/85">
+                <label className="flex flex-col gap-2 text-sm text-gray-100/85">
                   Phone Number
                   <input
                     type="tel"
@@ -221,17 +221,17 @@ export default function ContactUsPage() {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="Enter your phone number"
-                    className="rounded-xl border border-blue-600/35 bg-black/50 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-blue-200/35 focus:border-orange-400/60"
+                    className="rounded-xl border border-gray-600/35 bg-black/50 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-blue-200/35 focus:border-orange-400/60"
                   />
                 </label>
 
-                <label className="sm:col-span-2 flex flex-col gap-2 text-sm text-blue-100/85">
+                <label className="sm:col-span-2 flex flex-col gap-2 text-sm text-gray-100/85">
                   Service Interested In
                   <select
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="rounded-xl border border-blue-600/35 bg-black/50 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-orange-400/60"
+                    className="rounded-xl border border-gray-600/35 bg-black/50 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-orange-400/60"
                   >
                     <option value="">Select a service</option>
                     {serviceOptions.map((service) => (
@@ -242,7 +242,7 @@ export default function ContactUsPage() {
                   </select>
                 </label>
 
-                <label className="sm:col-span-2 flex flex-col gap-2 text-sm text-blue-100/85">
+                <label className="sm:col-span-2 flex flex-col gap-2 text-sm text-gray-100/85">
                   Message *
                   <textarea
                     name="message"
@@ -251,7 +251,7 @@ export default function ContactUsPage() {
                     onChange={handleChange}
                     placeholder="Tell us about your project"
                     required
-                    className="resize-none rounded-xl border border-blue-600/35 bg-black/50 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-blue-200/35 focus:border-orange-400/60"
+                    className="resize-none rounded-xl border border-gray-600/35 bg-black/50 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-blue-200/35 focus:border-orange-400/60"
                   />
                 </label>
 
@@ -268,8 +268,8 @@ export default function ContactUsPage() {
             </article>
 
             <aside className="space-y-5">
-              <article className="rounded-3xl border border-white/15 border border-white/15 bg-[rgba(18,17,17,0.8)] p-6 shadow-[0_16px_50px_rgba(0,0,0,0.4)] sm:p-8">
-                <h3 className="text-2xl font-semibold text-blue-50">
+              <article className="rounded-3xl border border-white/15 bg-[rgba(18,17,17,0.8)] p-6 shadow-[0_16px_50px_rgba(0,0,0,0.4)] sm:p-8">
+                <h3 className="text-2xl text-gradient font-semibold text-blue-50">
                   Get in Touch Today
                 </h3>
                 <p className="mt-2 text-sm text-blue-100/75">
@@ -299,10 +299,10 @@ export default function ContactUsPage() {
                   <div>
                     <p className="text-[#48a5db]">Email</p>
                     <a
-                      href="mailto:contact@prifabit.com"
+                      href="mailto:hr@techsopi.com"
                       className="mt-1 block text-base font-semibold text-blue-50 hover:text-orange-200"
                     >
-                      contact@prifabit.com
+                      hr@techsopi.com
                     </a>
                     <p className="mt-1 text-blue-200/65">
                       Send us an email anytime
@@ -321,7 +321,7 @@ export default function ContactUsPage() {
                 </div>
               </article>
 
-              <article className="rounded-3xl border border-white/15 border border-white/15 bg-[rgba(18,17,17,0.8)] p-6 shadow-[0_16px_50px_rgba(0,0,0,0.4)] sm:p-8">
+              <article className="rounded-3xl border border-white/15  bg-[rgba(18,17,17,0.8)] p-6 shadow-[0_16px_50px_rgba(0,0,0,0.4)] sm:p-8">
                 <h3 className="text-xl font-semibold text-white">
                   Quick Contact
                 </h3>
@@ -333,10 +333,10 @@ export default function ContactUsPage() {
                     Call us now: +91 78800 97779
                   </a>
                   <a
-                    href="mailto:info@prifabit.com"
+                    href="mailto:hr@techsopi.com"
                     className="rounded-lg border border-white/15 bg-[rgba(18,17,17,0.5)] bg-black/25 px-4 py-2.5 font-medium text-white transition-colors "
                   >
-                    Email: info@prifabit.com
+                    Email: hr@techsopi.com
                   </a>
                   <a
                     href="https://wa.me/917880097779"

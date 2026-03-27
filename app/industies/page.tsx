@@ -246,10 +246,10 @@ export default function IndustiesPage() {
 
   return (
     <main className="w-full bg-[#03050b]">
-      <section className=" relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')] bg-cover bg-bottom  px-6 pb-20 pt-20 md:pb-48 md:pt-48 sm:px-10 lg:px-14">
+      <section className=" relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')] bg-cover bg-bottom  px-6 pb-20 pt-20 md:pb-64 md:pt-64 sm:px-10 lg:px-14">
         <div className="relative mx-auto w-full max-w-350 px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="mt-4 text-4xl font-inter font-semibold leading-tight text-white sm:text-6xl">
-            Industries We <span className="text-orange-500">Serve</span>
+            Industries We <span className="gradient-text">Serve</span>
           </h1>
           <p className="mx-auto mt-4 max-w-3xl text-base font-inter font-normal leading-relaxed text-white/80 sm:text-lg">
             Specialized IT solutions across diverse industries with deep

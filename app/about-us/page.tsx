@@ -31,7 +31,7 @@ const coreValues = [
 export default function AboutUsPage() {
   return (
     <main className="min-h-screen bg-black text-white">
-      <section className="py-20 relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')] bg-cover bg-bottom  sm:py-20 xl:pb-48 xl:pt-40">
+      <section className="py-20 relative overflow-hidden bg-black bg-[url('/images/service-bg-inner.webp')] bg-cover bg-bottom  sm:py-20 xl:pb-56 xl:pt-56">
         <div className="absolute -left-10 top-10 h-44 w-44 rounded-full bg-orange-500/15 blur-3xl" />
         <div className="absolute -right-4 top-2 h-52 w-52 rounded-full bg-blue-500/20 blur-3xl" />
 
