@@ -104,6 +104,8 @@ select {
   display: block;
 }
 
+
+
 @media (min-width: 1200px) {
   .header-desktop-nav {
     display: block;

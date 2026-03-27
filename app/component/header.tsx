@@ -200,7 +200,7 @@ function Header() {
             <Image
               loading="lazy"
               src={logo}
-              alt="Altimetrik Logo"
+              alt="Logo"
               className="h-auto w-[120px] md:w-[170px]  pl-2"
             />
           </Link>

@@ -204,12 +204,12 @@ export default function Footer() {
             <div className="flex flex-col gap-8 xl:flex-row xl:items-center xl:justify-between">
               <Link
                 href="/"
-                aria-label="Altimetrik home"
+                aria-label=" home"
                 className="inline-flex items-center"
               >
                 <Image
                   src={logo}
-                  alt="Altimetrik Logo"
+                  alt="Logo"
                   className="h-auto w-40"
                   priority={false}
                 />

@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 type Office = {
   name: string;
   address: string;
@@ -42,6 +46,69 @@ const serviceOptions = [
 ];
 
 export default function ContactUsPage() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    company: "",
+    phone: "",
+    service: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+    setSubmitted(false);
+
+    try {
+      const response = await fetch("/api/contact-us", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to send message");
+      }
+
+      setSubmitted(true);
+      setFormData({
+        fullName: "",
+        email: "",
+        company: "",
+        phone: "",
+        service: "",
+        message: "",
+      });
+
+      // Clear success message after 5 seconds
+      setTimeout(() => setSubmitted(false), 5000);
+    } catch (err: any) {
+      setError(err.message || "Failed to send message. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <main className="min-h-screen bg-black text-white">
       <section className="bg-[url('/images/service-bg-inner.webp')] bg-bottom relative overflow-hidden px-6 pb-20 pt-20 md:pb-36 md:pt-48 sm:px-10 lg:px-14">
@@ -70,13 +137,32 @@ export default function ContactUsPage() {
                 hours.
               </p>
 
-              <form className="mt-7 grid gap-4 sm:grid-cols-2">
+              <form
+                className="mt-7 grid gap-4 sm:grid-cols-2"
+                onSubmit={handleSubmit}
+              >
+                {submitted && (
+                  <div className="sm:col-span-2 rounded-lg bg-green-500/20 border border-green-500/50 p-4 text-green-200">
+                    Thank you for your message! We'll get back to you within 24
+                    hours.
+                  </div>
+                )}
+
+                {error && (
+                  <div className="sm:col-span-2 rounded-lg bg-red-500/20 border border-red-500/50 p-4 text-red-200">
+                    {error}
+                  </div>
+                )}
+
                 <label className="flex flex-col gap-2 text-sm text-blue-100/85">
                   Full Name *
                   <input
                     type="text"
                     name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
                     placeholder="Enter your full name"
+                    required
                     className="rounded-xl border border-blue-600/35 bg-black/50 !important px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-blue-200/35 focus:border-orange-400/60"
                   />
                 </label>
@@ -86,7 +172,10 @@ export default function ContactUsPage() {
                   <input
                     type="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="Enter your email"
+                    required
                     className="rounded-xl border border-blue-600/35 bg-black/50 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-blue-200/35 focus:border-orange-400/60"
                   />
                 </label>
@@ -96,6 +185,8 @@ export default function ContactUsPage() {
                   <input
                     type="text"
                     name="company"
+                    value={formData.company}
+                    onChange={handleChange}
                     placeholder="Company name"
                     className="rounded-xl border border-blue-600/35 bg-black/50 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-blue-200/35 focus:border-orange-400/60"
                   />
@@ -106,6 +197,8 @@ export default function ContactUsPage() {
                   <input
                     type="tel"
                     name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
                     placeholder="Enter your phone number"
                     className="rounded-xl border border-blue-600/35 bg-black/50 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-blue-200/35 focus:border-orange-400/60"
                   />
@@ -115,7 +208,8 @@ export default function ContactUsPage() {
                   Service Interested In
                   <select
                     name="service"
-                    defaultValue=""
+                    value={formData.service}
+                    onChange={handleChange}
                     className="rounded-xl border border-blue-600/35 bg-black/50 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-orange-400/60"
                   >
                     <option value="" disabled>
@@ -134,17 +228,21 @@ export default function ContactUsPage() {
                   <textarea
                     name="message"
                     rows={5}
+                    value={formData.message}
+                    onChange={handleChange}
                     placeholder="Tell us about your project"
+                    required
                     className="resize-none rounded-xl border border-blue-600/35 bg-black/50 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-blue-200/35 focus:border-orange-400/60"
                   />
                 </label>
 
                 <div className="sm:col-span-2">
                   <button
-                    type="button"
-                    className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold text-black transition-colors hover:bg-white/80 cursor-pointer"
+                    type="submit"
+                    disabled={loading}
+                    className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-semibold text-black transition-colors hover:bg-white/80 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Send Message
+                    {loading ? "Sending..." : "Send Message"}
                   </button>
                 </div>
               </form>
