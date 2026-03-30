@@ -29,9 +29,9 @@ export default function ServicesPage() {
       </section>
 
       {/* Three Feature Sections */}
-      <section className="relative bg-black px-6 py-48 md:px-10 lg:px-14 overflow-hidden">
+      <section className="relative bg-black px-6 py-0 md:py-48 md:px-10 lg:px-14 overflow-hidden">
         <div className="container mx-auto">
-          <div className="mx-auto max-w-350 flex flex-col space-y-96">
+          <div className="mx-auto max-w-350 flex flex-col space-y-48 md:space-y-96">
             {/* Section 1: Digital Strategies */}
             <div className="mb-32 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               <div className="space-y-6 order-2 md:order-1">
@@ -51,13 +51,13 @@ export default function ServicesPage() {
                 <div className="flex gap-4 flex-wrap pt-4">
                   <Link
                     href="/services/custom-software-development"
-                    className="px-6 py-2.5 border border-zinc-600 rounded-full text-sm font-semibold text-white hover:bg-zinc-900 transition-colors"
+                    className="px-6 py-2.5 text-xs md:px-6 md:text-sm border border-zinc-600 rounded-full  font-semibold text-white hover:bg-zinc-900 transition-colors"
                   >
                     LEARN MORE
                   </Link>
                   <Link
                     href="/blog"
-                    className="px-6 py-2.5 border border-zinc-600 rounded-full text-sm font-semibold text-white hover:bg-zinc-900 transition-colors"
+                    className="px-6 py-2.5 text-xs md:px-6 md:text-sm border border-zinc-600 rounded-full  font-semibold text-white hover:bg-zinc-900 transition-colors"
                   >
                     READ CASE STUDIES
                   </Link>
@@ -105,13 +105,13 @@ export default function ServicesPage() {
                 <div className="flex gap-4 flex-wrap pt-4">
                   <Link
                     href="/services/digital-transformation"
-                    className="px-6 py-2.5 border border-zinc-600 rounded-full text-sm font-semibold text-white hover:bg-zinc-900 transition-colors"
+                    className="px-6 py-2.5 text-xs md:px-6 md:text-sm border border-zinc-600 rounded-full  font-semibold text-white hover:bg-zinc-900 transition-colors"
                   >
                     LEARN MORE
                   </Link>
                   <Link
                     href="/blog"
-                    className="px-6 py-2.5 border border-zinc-600 rounded-full text-sm font-semibold text-white hover:bg-zinc-900 transition-colors"
+                    className="px-6 py-2.5 text-xs md:px-6 md:text-sm border border-zinc-600 rounded-full  font-semibold text-white hover:bg-zinc-900 transition-colors"
                   >
                     READ CASE STUDIES
                   </Link>
@@ -120,7 +120,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Section 3: AI/Gen AI */}
-            <div className="mb-32 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div className="mb-0 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
               <div className="space-y-6 order-2 md:order-1">
                 <div>
                   <p className="text-sm font-semibold text-orange-400 mb-4 uppercase tracking-wider">
@@ -138,13 +138,13 @@ export default function ServicesPage() {
                 <div className="flex gap-4 flex-wrap pt-4">
                   <Link
                     href="/services/ai-machine-learning"
-                    className="px-6 py-2.5 border border-zinc-600 rounded-full text-sm font-semibold text-white hover:bg-zinc-900 transition-colors"
+                    className="px-6 py-2.5 text-xs md:px-6 md:text-sm border border-zinc-600 rounded-full  font-semibold text-white hover:bg-zinc-900 transition-colors"
                   >
                     LEARN MORE
                   </Link>
                   <Link
                     href="/blog"
-                    className="px-6 py-2.5 border border-zinc-600 rounded-full text-sm font-semibold text-white hover:bg-zinc-900 transition-colors"
+                    className="px-6 py-2.5 text-xs md:px-6 md:text-sm border border-zinc-600 rounded-full  font-semibold text-white hover:bg-zinc-900 transition-colors"
                   >
                     READ CASE STUDIES
                   </Link>
@@ -154,7 +154,7 @@ export default function ServicesPage() {
                 <div className="relative w-124 h-auto">
                   <div className="relative w-auto h-auto">
                     <Image
-                      src={service2}
+                      src={service3}
                       alt="Custom Software Development"
                       className="h-auto w-full rounded-3xl object-cover"
                     />

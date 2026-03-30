@@ -58,12 +58,42 @@ export default function ContactUsPage() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [fieldErrors, setFieldErrors] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+  });
 
   // Initialize EmailJS
   useEffect(() => {
     // Use your actual Public Key (Account ID) from https://dashboard.emailjs.com/admin/account
     emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "");
   }, []);
+
+  const validateField = (name: string, value: string) => {
+    let error = "";
+    switch (name) {
+      case "fullName":
+        if (value && !/^[a-zA-Z\s]+$/.test(value)) {
+          error = "Name can only contain letters and spaces";
+        }
+        break;
+      case "email":
+        if (value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+          error = "Please enter a valid email address";
+        }
+        break;
+      case "phone":
+        if (value && !/^\d+$/.test(value)) {
+          error = "Phone number can only contain digits";
+        }
+        break;
+    }
+    setFieldErrors((prev) => ({
+      ...prev,
+      [name]: error,
+    }));
+  };
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -75,6 +105,7 @@ export default function ContactUsPage() {
       ...prev,
       [name]: value,
     }));
+    validateField(name, value);
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -83,9 +114,13 @@ export default function ContactUsPage() {
     setError("");
     setSubmitted(false);
 
-    // Validate required fields
-    if (!formData.fullName || !formData.email || !formData.message) {
-      setError("Please fill in all required fields");
+    // Validate all fields
+    const hasErrors = Object.values(fieldErrors).some((err) => err !== "");
+    const requiredFieldsFilled =
+      formData.fullName && formData.email && formData.message;
+
+    if (!requiredFieldsFilled || hasErrors) {
+      setError("Please fill in all required fields correctly");
       setLoading(false);
       return;
     }
@@ -116,6 +151,11 @@ export default function ContactUsPage() {
         phone: "",
         service: "",
         message: "",
+      });
+      setFieldErrors({
+        fullName: "",
+        email: "",
+        phone: "",
       });
 
       // Clear success message after 5 seconds
@@ -186,6 +226,11 @@ export default function ContactUsPage() {
                     required
                     className="rounded-xl border border-gray-600/35 bg-black/50 !important px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-blue-200/35 focus:border-orange-400/60"
                   />
+                  {fieldErrors.fullName && (
+                    <span className="text-red-400 text-xs">
+                      {fieldErrors.fullName}
+                    </span>
+                  )}
                 </label>
 
                 <label className="flex flex-col gap-2 text-sm text-gray-100/85">
@@ -199,6 +244,11 @@ export default function ContactUsPage() {
                     required
                     className="rounded-xl border border-gray-600/35 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-blue-200/35 focus:border-orange-400/60"
                   />
+                  {fieldErrors.email && (
+                    <span className="text-red-400 text-xs">
+                      {fieldErrors.email}
+                    </span>
+                  )}
                 </label>
 
                 <label className="flex flex-col gap-2 text-sm text-gray-100/85">
@@ -223,6 +273,11 @@ export default function ContactUsPage() {
                     placeholder="Enter your phone number"
                     className="rounded-xl border border-gray-600/35 bg-black/50 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-blue-200/35 focus:border-orange-400/60"
                   />
+                  {fieldErrors.phone && (
+                    <span className="text-red-400 text-xs">
+                      {fieldErrors.phone}
+                    </span>
+                  )}
                 </label>
 
                 <label className="sm:col-span-2 flex flex-col gap-2 text-sm text-gray-100/85">
@@ -371,7 +426,7 @@ export default function ContactUsPage() {
                   <h3 className="text-xl font-semibold text-orange-500">
                     {office.name}
                   </h3>
-                  <p className="mt-3 text-sm leading-7 text-blue-100/85">
+                  <p className="mt-3 text-sm leading-7 text-white-100/85">
                     {office.address}
                   </p>
 

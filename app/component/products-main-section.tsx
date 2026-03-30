@@ -22,24 +22,6 @@ const productData = [
     description:
       "A unified HRMS platform to manage employee onboarding, attendance, payroll, appraisals, and performance workflows.",
   },
-  {
-    label: "Admission & Fees Management",
-    href: "/products/admission-fees-management",
-    description:
-      "A complete admission and fee management system for streamlined student enrollment, fee tracking, and payment reconciliation.",
-  },
-  {
-    label: "CRM Platform",
-    href: "/products/crm-platform",
-    description:
-      "A robust CRM platform for lead capture, pipeline tracking, customer communication, and long-term relationship growth.",
-  },
-  {
-    label: "Billing Software",
-    href: "/products/billing-software",
-    description:
-      "Smart billing software for invoicing, payment collection, tax handling, and account statement automation.",
-  },
 ];
 
 type ProductsMainSectionProps = {

@@ -6,53 +6,65 @@ const footerColumns = [
   {
     title: "Services",
     links: [
-      { label: "Digital Business", href: "/services" },
-      { label: "Platform Modernization", href: "/services" },
-      { label: "AI/GenAI", href: "/services/ai-machine-learning" },
-      { label: "Intelligent Systems and Operations", href: "/services" },
-      { label: "Digital Enterprise", href: "/services/digital-transformation" },
-      { label: "Digital Operations", href: "/services" },
+      {
+        label: "Custom Software Development",
+        href: "/services/custom-software-development",
+      },
+      { label: "AI & Machine Learning", href: "/services/ai-machine-learning" },
+      {
+        label: "Digital Transformation",
+        href: "/services/digital-transformation",
+      },
+      {
+        label: "Staff Augmentation",
+        href: "/services/staff-augmentation",
+      },
+      { label: "IT Consulting", href: "/services/it-consulting" },
+      { label: "Digital Marketing", href: "/services/digital-marketing" },
     ],
   },
   {
-    title: "Industries",
+    title: "Products",
     links: [
-      { label: "BFSI", href: "/industies" },
-      { label: "Life Sciences", href: "/industies" },
-      { label: "Retail & CPG", href: "/industies" },
-      { label: "Automotive", href: "/industies" },
-      { label: "Manufacturing", href: "/industies" },
+      {
+        label: "VanSales - AI Mobile Sales",
+        href: "/products/vansales-ai-mobile-sales",
+      },
+      {
+        label: "Merchandising Platform",
+        href: "/products/merchandising-platform",
+      },
+      { label: "HRMS Solution", href: "/products/hrms-solution" },
+      {
+        label: "Admissions & Fees Management",
+        href: "/products/admission-fees-management",
+      },
+      { label: "CRM Platform", href: "/products/crm-platform" },
+      { label: "Billing Software", href: "/products/billing-software" },
     ],
   },
   {
-    title: "Capabilities",
+    title: "Quick Links",
     links: [
-      { label: "Data Engineering", href: "/services" },
-      { label: "Cloud Engineering", href: "/services" },
-      { label: "DevSecOps", href: "/services" },
-      { label: "Agile", href: "/services" },
-      { label: "Information Security", href: "/services" },
-      { label: "Site Reliability Engineering (SRE)", href: "/services" },
-      { label: "Quality Engineering", href: "/services" },
-      { label: "Salesforce", href: "/services" },
-      { label: "Digital Engineering", href: "/services" },
+      { label: "Home", href: "/" },
+      { label: "About Us", href: "/about-us" },
+      { label: "Contact Us", href: "/contact-us" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { label: "Blogs", href: "/blog" },
-      { label: "Case Studies", href: "/blog" },
-      { label: "White Papers", href: "/blog" },
-      { label: "Videos", href: "/blog" },
-      { label: "Glossary", href: "/blog" },
+      { label: "Services", href: "/services" },
+      { label: "Products", href: "/products" },
+      { label: "Industries", href: "/industries" },
+      { label: "Technologies", href: "/technologies" },
     ],
   },
   {
     title: "About",
     links: [
       { label: "About Us", href: "/about-us" },
-      { label: "Press", href: "/about-us" },
+      { label: "Contact Us", href: "/contact-us" },
       { label: "Careers", href: "/career" },
     ],
   },
@@ -166,7 +178,7 @@ export default function Footer() {
             </p>
 
             <Link
-              href="/contact-us"
+              href="../../contact-us"
               className="mt-10 inline-flex font-inter items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-normal uppercase tracking-wide text-black transition hover:bg-white"
             >
               Contact Our AI Experts

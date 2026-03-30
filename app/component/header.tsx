@@ -477,40 +477,42 @@ function Header() {
                 </li>
               ))}
             <li data-mobile-item className="px-3 pt-2">
-              <button
-                type="button"
-                onClick={() => setMobileServicesOpen((prev) => !prev)}
-                aria-expanded={mobileServicesOpen}
-                aria-controls="mobile-services-submenu"
-                className={`flex w-full items-center justify-between rounded-xl py-2 text-left text-xs text-zinc-400 transition-colors hover:bg-zinc-800 ${
-                  isActivePath("/services") ? "text-orange-500" : ""
-                }`}
-              >
-                <span
-                  className={`font-hn-medium text-sm uppercase ${
+              <div className="flex w-full items-center justify-between">
+                <Link
+                  href="/services"
+                  className={`font-hn-medium text-sm uppercase transition-colors hover:text-white/80 ${
                     isActivePath("/services") ? "text-orange-500" : "text-white"
                   }`}
+                  onClick={() => setMenuOpen(false)}
                 >
                   Services
-                </span>
-                <svg
-                  className={`h-4 w-4 transition-transform duration-200 ${
-                    mobileServicesOpen ? "rotate-180" : "rotate-0"
-                  }`}
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => setMobileServicesOpen((prev) => !prev)}
+                  aria-expanded={mobileServicesOpen}
+                  aria-controls="mobile-services-submenu"
+                  className="flex items-center justify-center rounded-xl py-2 text-left text-xs text-zinc-400 transition-colors hover:bg-zinc-800"
                 >
-                  <path
-                    d="M5 8L10 13L15 8"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    className={`h-4 w-4 transition-transform duration-200 ${
+                      mobileServicesOpen ? "rotate-180" : "rotate-0"
+                    }`}
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M5 8L10 13L15 8"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
             </li>
             {mobileServicesOpen && (
               <li>
@@ -534,40 +536,42 @@ function Header() {
               </li>
             )}
             <li data-mobile-item className="px-3 pt-2">
-              <button
-                type="button"
-                onClick={() => setMobileProductsOpen((prev) => !prev)}
-                aria-expanded={mobileProductsOpen}
-                aria-controls="mobile-products-submenu"
-                className={`flex w-full items-center justify-between rounded-xl py-2 text-left text-xs text-zinc-400 transition-colors hover:bg-zinc-800 ${
-                  isActivePath("/products") ? "text-orange-500" : ""
-                }`}
-              >
-                <span
-                  className={`font-hn-medium text-sm uppercase ${
+              <div className="flex w-full items-center justify-between">
+                <Link
+                  href="/products"
+                  className={`font-hn-medium text-sm uppercase transition-colors hover:text-white/80 ${
                     isActivePath("/products") ? "text-orange-500" : "text-white"
                   }`}
+                  onClick={() => setMenuOpen(false)}
                 >
                   Products
-                </span>
-                <svg
-                  className={`h-4 w-4 transition-transform duration-200 ${
-                    mobileProductsOpen ? "rotate-180" : "rotate-0"
-                  }`}
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => setMobileProductsOpen((prev) => !prev)}
+                  aria-expanded={mobileProductsOpen}
+                  aria-controls="mobile-products-submenu"
+                  className="flex items-center justify-center rounded-xl py-2 text-left text-xs text-zinc-400 transition-colors hover:bg-zinc-800"
                 >
-                  <path
-                    d="M5 8L10 13L15 8"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    className={`h-4 w-4 transition-transform duration-200 ${
+                      mobileProductsOpen ? "rotate-180" : "rotate-0"
+                    }`}
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M5 8L10 13L15 8"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
             </li>
             {mobileProductsOpen && (
               <li>
