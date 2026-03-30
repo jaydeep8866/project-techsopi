@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Header from "../component/header";
@@ -310,7 +310,7 @@ const searchableContent: SearchResult[] = [
   },
 ];
 
-export default function SearchPage() {
+function SearchContent() {
   const searchParams = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get("q") || "");
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -395,7 +395,7 @@ export default function SearchPage() {
                               {result.description}
                             </p>
                           </div>
-                          <span className="text-2xl text-zinc-600 group-hover:text-orange-400 transition-colors flex-shrink-0">
+                          <span className="text-2xl text-zinc-600 group-hover:text-orange-400 transition-colors shrink-0">
                             →
                           </span>
                         </div>
@@ -421,5 +421,29 @@ export default function SearchPage() {
         </div>
       </section>
     </main>
+  );
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense
+      fallback={
+        <main className="min-h-screen bg-black text-white">
+          <Header />
+          <section className="pt-32 md:pt-36 px-6 pb-20 md:pb-32 sm:px-10 lg:px-14">
+            <div className="mx-auto max-w-4xl text-center">
+              <div className="text-center mb-12">
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                  Search results
+                </h1>
+              </div>
+              <p className="text-zinc-500 text-lg">Loading...</p>
+            </div>
+          </section>
+        </main>
+      }
+    >
+      <SearchContent />
+    </Suspense>
   );
 }
