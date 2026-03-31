@@ -57,11 +57,11 @@ export default function AboutUsPage() {
 
               <div className="mt-4 space-y-4 text-sm font-inter font-normal leading-7 text-white/70 sm:text-base">
                 <p>
-                  Founded in 2010, PriFab IT Solutions emerged from a vision to
-                  bridge the gap between cutting-edge technology and practical
-                  business solutions. Our journey began with a small team of
-                  passionate developers and has grown into a comprehensive IT
-                  services company.
+                  Founded in 2010, Techsopi IT Solutions emerged from a vision
+                  to bridge the gap between cutting-edge technology and
+                  practical business solutions. Our journey began with a small
+                  team of passionate developers and has grown into a
+                  comprehensive IT services company.
                 </p>
                 <p>
                   Over the years, we have successfully delivered 50+ projects

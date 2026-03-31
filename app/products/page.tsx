@@ -28,7 +28,7 @@ export default function ProductsPage() {
     <main className="mx-auto w-full px-0 md:pt-0 md:pb-20 bg-black text-white">
       <div className="pt-0 md:pt-10 new-combine lg:h-200 lg:min-h-175 bg-black bg-[url('/images/service-bg-inner.webp')] bg-no-repeat bg-cover bg-bottom md:bg-right">
         <section className="product-main">
-          <ProductsMainSection activeHref="/products/crm-platform" />
+          <ProductsMainSection activeHref="/products/hrms-solution" />
         </section>
       </div>
 

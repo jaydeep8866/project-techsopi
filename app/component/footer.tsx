@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/logo.png";
+import logo from "../../public/logo.svg";
 
 const footerColumns = [
   {
@@ -93,7 +93,7 @@ const socialLinks = [
   },
   {
     label: "Instagram",
-    href: "#",
+    href: "Instagram - https://www.instagram.com/techsopi_insight21/?utm_source=qr&r=nametag",
     icon: (
       <svg
         viewBox="0 0 24 24"
@@ -121,7 +121,7 @@ const socialLinks = [
   },
   {
     label: "LinkedIn",
-    href: "#",
+    href: "Linkedin - https://www.linkedin.com/company/techsopi-global-pvt-ltd/",
     icon: (
       <svg
         viewBox="0 0 24 24"

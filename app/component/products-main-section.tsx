@@ -77,7 +77,7 @@ export default function ProductsMainSection({
                   <span
                     className={`text-base font-inter font-semibold leading-snug transition-colors sm:text-xl ${
                       isActive
-                        ? "text-orange-400"
+                        ? "text-white"
                         : "text-white group-hover:text-white/80"
                     }`}
                   >

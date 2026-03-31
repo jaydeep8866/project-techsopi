@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { gsap } from "gsap";
-import logo from "../../public/logo.png";
+import logo from "../../public/logo.svg";
 
 const navItems = [
   { label: "Home", href: "/" },

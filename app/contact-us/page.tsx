@@ -14,15 +14,15 @@ const offices: Office[] = [
   {
     name: "Registered Office",
     address:
-      "G-01, Freedom Fighter Nagar, Near Water Tank, Nanded, Maharashtra - 431603",
-    phone: "+91 78800 97779",
+      "Akshat Enclave, Kanti Chandra Rd, Kanti Nagar, Sindhi Camp, Jaipur, Rajasthan - 302016 Rajasthan",
+    phone: "+91 14143 76417",
     email: "hr@techsopi.com",
   },
   {
     name: "Corporate Office",
     address:
-      "Office No : 202-B, Radhika Premier, Mahalaxmi Nagar Main Road, Indore 452010",
-    phone: "+91 731 4995680",
+      "44203 ,Prestige Aston Park, Prestige City Sarjapura Road Bangalore - 562125 Bangalore",
+    phone: "+91 14143 76417",
     email: "hr@techsopi.com",
   },
   {
@@ -335,17 +335,12 @@ export default function ContactUsPage() {
                   <div>
                     <p className="text-[#48a5db]">Phone</p>
                     <a
-                      href="tel:+917880097779"
+                      href="tel:+911414376417"
                       className="mt-1 block text-base font-semibold text-blue-50 hover:text-orange-200"
                     >
-                      +91 78800 97779
+                      +91 141-4376417
                     </a>
-                    <a
-                      href="tel:+917312999008"
-                      className="block text-base font-semibold text-blue-50 hover:text-orange-200"
-                    >
-                      +91 731 2999008
-                    </a>
+
                     <p className="mt-1 text-blue-200/65">
                       Call us during business hours
                     </p>
@@ -382,10 +377,10 @@ export default function ContactUsPage() {
                 </h3>
                 <div className="mt-4 flex flex-col gap-3 text-sm">
                   <a
-                    href="tel:+917880097779"
+                    href="tel:+911414376417"
                     className="rounded-lg border border-white/15 bg-[rgba(18,17,17,0.5)] bg-black/25 px-4 py-2.5 font-medium text-white transition-colors "
                   >
-                    Call us now: +91 78800 97779
+                    Call us now: +91 14143 76417
                   </a>
                   <a
                     href="mailto:hr@techsopi.com"
@@ -394,7 +389,7 @@ export default function ContactUsPage() {
                     Email: hr@techsopi.com
                   </a>
                   <a
-                    href="https://wa.me/917880097779"
+                    href="https://wa.me/+911414376417"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="rounded-lg border border-white/15 bg-[rgba(18,17,17,0.5)] bg-black/25 px-4 py-2.5 font-medium text-white transition-colors 0"
