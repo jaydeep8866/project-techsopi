@@ -172,7 +172,7 @@ export default function Footer() {
             </h2>
 
             <p className="font-inter font-normal mt-5 max-w-3xl text-base leading-relaxed text-white/90 sm:text-2xl sm:leading-[1.35]">
-              Let's discuss how our IT solutions can help you achieve your
+              Let&apos;s discuss how our IT solutions can help you achieve your
               business goals and drive digital transformation. Contact us today
               for a free consultation.
             </p>

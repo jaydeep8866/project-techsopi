@@ -129,7 +129,7 @@ export default function AboutUsPage() {
                   growth, efficiency, and competitive advantage. We are
                   committed to delivering exceptional value through cutting-edge
                   technology, expert consultation, and unwavering dedication to
-                  our clients' success.
+                  our clients&apos; success.
                 </p>
               </article>
 

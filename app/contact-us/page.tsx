@@ -160,10 +160,11 @@ export default function ContactUsPage() {
 
       // Clear success message after 5 seconds
       setTimeout(() => setSubmitted(false), 5000);
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error("Email error:", err);
       setError(
-        err.message || "Failed to send message. Please try again later.",
+        (err as Error).message ||
+          "Failed to send message. Please try again later.",
       );
     } finally {
       setLoading(false);
@@ -204,8 +205,8 @@ export default function ContactUsPage() {
               >
                 {submitted && (
                   <div className="sm:col-span-2 rounded-lg bg-green-500/20 border border-green-500/50 p-4 text-green-200">
-                    Thank you for your message! We'll get back to you within 24
-                    hours.
+                    Thank you for your message! We&apos;ll get back to you
+                    within 24 hours.
                   </div>
                 )}
 

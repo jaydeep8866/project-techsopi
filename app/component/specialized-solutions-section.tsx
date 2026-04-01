@@ -11,41 +11,6 @@ type SpecializedSolutionsSectionProps = {
   descriptionClassName?: string;
 };
 
-const specializedSolutions = [
-  {
-    code: "MB",
-    title: "Mobile Development",
-    description: "Native and cross-platform apps for iOS and Android.",
-  },
-  {
-    code: "DS",
-    title: "Data Solutions",
-    description:
-      "Analytics, data pipelines, and BI dashboards for smarter decisions.",
-  },
-  {
-    code: "PO",
-    title: "Performance Optimization",
-    description:
-      "Application and infrastructure tuning for speed and reliability.",
-  },
-  {
-    code: "MS",
-    title: "Maintenance & Support",
-    description: "24/7 monitoring, issue resolution, and release support.",
-  },
-  {
-    code: "CL",
-    title: "Cloud Solutions",
-    description: "Cloud migration, modernization, and scalable architecture.",
-  },
-  {
-    code: "QA",
-    title: "Quality Assurance",
-    description: "Manual and automated testing to ensure stable delivery.",
-  },
-];
-
 export default function SpecializedSolutionsSection({
   items,
   sectionClassName = "specialize-solution relative overflow-hidden py-16 sm:py-20",

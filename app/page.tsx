@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Image from "next/image";
 import project from "../public/images/5.webp";
 import gsap from "gsap";
@@ -257,7 +257,7 @@ export default function Home() {
     };
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!numbersGridRef.current) {
       return;
     }
@@ -476,9 +476,9 @@ export default function Home() {
                   <span className="text-orange-500"> Leaders</span>
                 </h2>
                 <p className="text-left text-xl my-5 text-white/50 max-w-3xl mx-auto font-inter font-normal">
-                  We're proud to work with innovative companies across various
-                  industries, helping them achieve their digital transformation
-                  goals and business success.
+                  We&apos;re proud to work with innovative companies across
+                  various industries, helping them achieve their digital
+                  transformation goals and business success.
                 </p>
               </div>
               <button className="rounded-full border border-white px-8 py-3 text-sm font-hn-light text-white transition hover:bg-white hover:text-black">

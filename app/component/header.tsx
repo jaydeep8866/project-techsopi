@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -174,15 +174,11 @@ function Header() {
     });
   }, [menuOpen]);
 
-  useEffect(() => {
-    if (!menuOpen) {
-      setMobileServicesOpen(false);
-      setMobileProductsOpen(false);
-    }
-  }, [menuOpen]);
-
-  useEffect(() => {
+  // eslint-disable-next-line react-hooks/set-state-in-effect
+  useLayoutEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setActiveMegaMenu(null);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsDesktopNavHovered(false);
   }, [pathname]);
 
